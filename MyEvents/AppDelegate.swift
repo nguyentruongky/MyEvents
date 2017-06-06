@@ -19,12 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         setupApp()
+        setupGooglePlace()
         return true
     }
     
     func setupGooglePlace() {
-        GMSPlacesClient.provideAPIKey(marSetting.placeApiKey)
-        GMSServices.provideAPIKey(marSetting.placeApiKey)
+        GMSPlacesClient.provideAPIKey(meSetting.placeApiKey)
+        GMSServices.provideAPIKey(meSetting.placeApiKey)
     }
     
     func setupApp() {

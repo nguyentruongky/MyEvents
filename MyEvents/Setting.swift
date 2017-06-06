@@ -18,7 +18,7 @@ struct meSetting {
         let testingTime = true
         
         if testingTime == true {
-            return UINavigationController(rootViewController: marSignupController())
+            return UINavigationController(rootViewController: meLoginController())
         }
         else {
             return UIViewController()

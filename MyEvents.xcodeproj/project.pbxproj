@@ -85,6 +85,7 @@
 		2617604D1EE7049F003BF367 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261760451EE7049F003BF367 /* Login.swift */; };
 		2617604E1EE7049F003BF367 /* LoginVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261760461EE7049F003BF367 /* LoginVIP.swift */; };
 		2617604F1EE7049F003BF367 /* ValidateEmailPasswordWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261760471EE7049F003BF367 /* ValidateEmailPasswordWorker.swift */; };
+		261760531EE70DAF003BF367 /* Supporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261760521EE70DAF003BF367 /* Supporter.swift */; };
 		B07BA22CD5019C5B5885DD5C /* Pods_MyEventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC40B90715E09B68234BF2 /* Pods_MyEventsUITests.framework */; };
 		B57E2F36A488B579F4F1DAA0 /* Pods_MyEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D781BA9634FC89F2EFC7F3 /* Pods_MyEvents.framework */; };
 /* End PBXBuildFile section */
@@ -185,6 +186,7 @@
 		261760451EE7049F003BF367 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		261760461EE7049F003BF367 /* LoginVIP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVIP.swift; sourceTree = "<group>"; };
 		261760471EE7049F003BF367 /* ValidateEmailPasswordWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateEmailPasswordWorker.swift; sourceTree = "<group>"; };
+		261760521EE70DAF003BF367 /* Supporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supporter.swift; sourceTree = "<group>"; };
 		26C8FD7917687F4C7EB1293E /* Pods-MyEventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEventsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyEventsUITests/Pods-MyEventsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		94CFB0F0BAF6F511D89291CF /* Pods-MyEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEvents.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyEvents/Pods-MyEvents.release.xcconfig"; sourceTree = "<group>"; };
 		B70D38EB3F7DA4ED25930481 /* Pods-MyEventsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEventsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyEventsUITests/Pods-MyEventsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 		26175EE71EE70431003BF367 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				261760511EE70DA5003BF367 /* Common */,
 				261760411EE7049F003BF367 /* Finishup */,
 				261760441EE7049F003BF367 /* Signup */,
 				261760481EE7049F003BF367 /* Login */,
@@ -445,6 +448,14 @@
 			);
 			name = Login;
 			path = ../../../../MonsterApps/Marco/iOs/Marco/Marco;
+			sourceTree = "<group>";
+		};
+		261760511EE70DA5003BF367 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				261760521EE70DAF003BF367 /* Supporter.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		6E03862695F5494EF1E1AA38 /* Frameworks */ = {
@@ -744,6 +755,7 @@
 				26175F6A1EE70456003BF367 /* knUITextView.swift in Sources */,
 				26175F561EE70456003BF367 /* knUnderlineTextField.swift in Sources */,
 				26175F3A1EE70456003BF367 /* knPagerController.swift in Sources */,
+				261760531EE70DAF003BF367 /* Supporter.swift in Sources */,
 				26175F371EE70456003BF367 /* knCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -948,6 +960,7 @@
 				26175EE11EE70403003BF367 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26175EE21EE70403003BF367 /* Build configuration list for PBXNativeTarget "MyEventsUITests" */ = {
 			isa = XCConfigurationList;
@@ -956,6 +969,7 @@
 				26175EE41EE70403003BF367 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
