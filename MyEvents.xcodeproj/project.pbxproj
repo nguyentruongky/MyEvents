@@ -86,6 +86,8 @@
 		2617604E1EE7049F003BF367 /* LoginVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261760461EE7049F003BF367 /* LoginVIP.swift */; };
 		2617604F1EE7049F003BF367 /* ValidateEmailPasswordWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261760471EE7049F003BF367 /* ValidateEmailPasswordWorker.swift */; };
 		261760531EE70DAF003BF367 /* Supporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261760521EE70DAF003BF367 /* Supporter.swift */; };
+		261760561EE740AE003BF367 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261760551EE740AE003BF367 /* EventList.swift */; };
+		261760581EE74441003BF367 /* ExtensionUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261760571EE74441003BF367 /* ExtensionUIImageView.swift */; };
 		B07BA22CD5019C5B5885DD5C /* Pods_MyEventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC40B90715E09B68234BF2 /* Pods_MyEventsUITests.framework */; };
 		B57E2F36A488B579F4F1DAA0 /* Pods_MyEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D781BA9634FC89F2EFC7F3 /* Pods_MyEvents.framework */; };
 /* End PBXBuildFile section */
@@ -187,6 +189,8 @@
 		261760461EE7049F003BF367 /* LoginVIP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVIP.swift; sourceTree = "<group>"; };
 		261760471EE7049F003BF367 /* ValidateEmailPasswordWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateEmailPasswordWorker.swift; sourceTree = "<group>"; };
 		261760521EE70DAF003BF367 /* Supporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supporter.swift; sourceTree = "<group>"; };
+		261760551EE740AE003BF367 /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
+		261760571EE74441003BF367 /* ExtensionUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIImageView.swift; sourceTree = "<group>"; };
 		26C8FD7917687F4C7EB1293E /* Pods-MyEventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEventsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyEventsUITests/Pods-MyEventsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		94CFB0F0BAF6F511D89291CF /* Pods-MyEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEvents.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyEvents/Pods-MyEvents.release.xcconfig"; sourceTree = "<group>"; };
 		B70D38EB3F7DA4ED25930481 /* Pods-MyEventsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEventsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyEventsUITests/Pods-MyEventsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				26175EE81EE70437003BF367 /* Libs */,
+				261760511EE70DA5003BF367 /* Common */,
 				26175EE71EE70431003BF367 /* Features */,
 				26175EE51EE70410003BF367 /* Configuration */,
 				26175EE61EE70421003BF367 /* Others */,
@@ -274,7 +279,7 @@
 		26175EE71EE70431003BF367 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				261760511EE70DA5003BF367 /* Common */,
+				261760541EE740A6003BF367 /* Events */,
 				261760411EE7049F003BF367 /* Finishup */,
 				261760441EE7049F003BF367 /* Signup */,
 				261760481EE7049F003BF367 /* Login */,
@@ -287,6 +292,7 @@
 			children = (
 				26175EEB1EE70456003BF367 /* knConstraints.swift */,
 				26175EEC1EE70456003BF367 /* knCollection */,
+				261760571EE74441003BF367 /* ExtensionUIImageView.swift */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -456,6 +462,14 @@
 				261760521EE70DAF003BF367 /* Supporter.swift */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		261760541EE740A6003BF367 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				261760551EE740AE003BF367 /* EventList.swift */,
+			);
+			name = Events;
 			sourceTree = "<group>";
 		};
 		6E03862695F5494EF1E1AA38 /* Frameworks */ = {
@@ -713,6 +727,7 @@
 				26175F521EE70456003BF367 /* knRippleAnimationView.swift in Sources */,
 				26175F3E1EE70456003BF367 /* PagerController.swift in Sources */,
 				26175F541EE70456003BF367 /* knTagView.swift in Sources */,
+				261760561EE740AE003BF367 /* EventList.swift in Sources */,
 				26175F461EE70456003BF367 /* knAnalogClockView.swift in Sources */,
 				26175F621EE70456003BF367 /* knUIColor.swift in Sources */,
 				26175F441EE70456003BF367 /* GradientView.swift in Sources */,
@@ -722,6 +737,7 @@
 				26175F5A1EE70456003BF367 /* TransitionSubmitButton.swift in Sources */,
 				26175F601EE70456003BF367 /* knUIApplication.swift in Sources */,
 				26175F761EE70457003BF367 /* Worker.swift in Sources */,
+				261760581EE74441003BF367 /* ExtensionUIImageView.swift in Sources */,
 				2617604A1EE7049F003BF367 /* Location.swift in Sources */,
 				26175F591EE70456003BF367 /* SnakePageControl.swift in Sources */,
 				26175F5B1EE70456003BF367 /* Uploader.swift in Sources */,
