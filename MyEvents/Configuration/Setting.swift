@@ -18,7 +18,7 @@ struct meSetting {
         let testingTime = true
         
         if testingTime == true {
-            return UINavigationController(rootViewController: meNewEventController())
+            return UINavigationController(rootViewController: meProfileManager())
         }
         else {
             return UIViewController()

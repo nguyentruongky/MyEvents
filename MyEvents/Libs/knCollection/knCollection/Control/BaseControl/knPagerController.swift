@@ -41,11 +41,6 @@ class knPagerController : PagerController {
     
     func formatTabIndicator() {
         tabsViewBackgroundColor = .white
-//        indicatorColor = fxColor.fx_119_203_189
-//        tabsTextColor = fxColor.fx_119_203_189
-//        selectedTabTextColor = fxColor.fx_119_203_189
-//        tabsTextFont = fxFont.font(size: 14)
-        
         centerCurrentTab = true
         tabTopOffset = 0
         tabHeight = 40

@@ -14,7 +14,7 @@ class meSignupController: knTableController {
     
     fileprivate let backgroundImageView: UIImageView = {
         
-        let imageName = "membership_background"
+        let imageName = "register"
         let iv = UIImageView(image: UIImage(named: imageName))
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFill

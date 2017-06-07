@@ -92,6 +92,9 @@
 		263351501EE89A1300BA3773 /* ValidateEmailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633514F1EE89A1300BA3773 /* ValidateEmailWorker.swift */; };
 		263351521EE89A6900BA3773 /* SignupVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351511EE89A6900BA3773 /* SignupVIP.swift */; };
 		263351541EE89A8200BA3773 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351531EE89A8200BA3773 /* Signup.swift */; };
+		2633515A1EE89E3300BA3773 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351591EE89E3300BA3773 /* ProfileManager.swift */; };
+		2633515E1EE8A06F00BA3773 /* MyEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633515D1EE8A06F00BA3773 /* MyEvents.swift */; };
+		263351601EE8A0A600BA3773 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633515F1EE8A0A600BA3773 /* UserDetail.swift */; };
 		B07BA22CD5019C5B5885DD5C /* Pods_MyEventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC40B90715E09B68234BF2 /* Pods_MyEventsUITests.framework */; };
 		B57E2F36A488B579F4F1DAA0 /* Pods_MyEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D781BA9634FC89F2EFC7F3 /* Pods_MyEvents.framework */; };
 /* End PBXBuildFile section */
@@ -199,6 +202,9 @@
 		2633514F1EE89A1300BA3773 /* ValidateEmailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateEmailWorker.swift; sourceTree = "<group>"; };
 		263351511EE89A6900BA3773 /* SignupVIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVIP.swift; sourceTree = "<group>"; };
 		263351531EE89A8200BA3773 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		263351591EE89E3300BA3773 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		2633515D1EE8A06F00BA3773 /* MyEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEvents.swift; sourceTree = "<group>"; };
+		2633515F1EE8A0A600BA3773 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		26C8FD7917687F4C7EB1293E /* Pods-MyEventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEventsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyEventsUITests/Pods-MyEventsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		94CFB0F0BAF6F511D89291CF /* Pods-MyEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEvents.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyEvents/Pods-MyEvents.release.xcconfig"; sourceTree = "<group>"; };
 		B70D38EB3F7DA4ED25930481 /* Pods-MyEventsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEventsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyEventsUITests/Pods-MyEventsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -287,6 +293,7 @@
 		26175EE71EE70431003BF367 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				263351561EE89ADA00BA3773 /* Profile */,
 				261760541EE740A6003BF367 /* Events */,
 				263351421EE88C4C00BA3773 /* ForgotPassword */,
 				261760481EE7049F003BF367 /* Login */,
@@ -471,6 +478,16 @@
 				263351451EE88C9700BA3773 /* ForgotPasswordVIP.swift */,
 			);
 			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		263351561EE89ADA00BA3773 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				263351591EE89E3300BA3773 /* ProfileManager.swift */,
+				2633515D1EE8A06F00BA3773 /* MyEvents.swift */,
+				2633515F1EE8A0A600BA3773 /* UserDetail.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		6E03862695F5494EF1E1AA38 /* Frameworks */ = {
@@ -702,6 +719,7 @@
 			files = (
 				26175F661EE70456003BF367 /* knUIScrollView.swift in Sources */,
 				26175F721EE70457003BF367 /* knScreenSize.swift in Sources */,
+				2633515A1EE89E3300BA3773 /* ProfileManager.swift in Sources */,
 				26175F361EE70456003BF367 /* AnimateItemCollectionLayout.swift in Sources */,
 				263351461EE88C9700BA3773 /* ForgotPasswordVIP.swift in Sources */,
 				26175F691EE70456003BF367 /* knUITextField.swift in Sources */,
@@ -751,6 +769,7 @@
 				26175F681EE70456003BF367 /* knUITableView.swift in Sources */,
 				2617605C1EE753B4003BF367 /* FloatLabelTextField.swift in Sources */,
 				26175F4F1EE70456003BF367 /* knLoadingView.swift in Sources */,
+				2633515E1EE8A06F00BA3773 /* MyEvents.swift in Sources */,
 				2617605A1EE74A4D003BF367 /* NewEvent.swift in Sources */,
 				26175F451EE70456003BF367 /* KMPlaceholderTextView.swift in Sources */,
 				26175F481EE70456003BF367 /* knBarButtonNumber.swift in Sources */,
@@ -777,6 +796,7 @@
 				26175F561EE70456003BF367 /* knUnderlineTextField.swift in Sources */,
 				26175F3A1EE70456003BF367 /* knPagerController.swift in Sources */,
 				261760531EE70DAF003BF367 /* Supporter.swift in Sources */,
+				263351601EE8A0A600BA3773 /* UserDetail.swift in Sources */,
 				26175F371EE70456003BF367 /* knCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
