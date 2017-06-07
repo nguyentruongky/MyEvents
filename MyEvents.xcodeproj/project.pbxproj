@@ -85,13 +85,13 @@
 		2617605C1EE753B4003BF367 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2617605B1EE753B4003BF367 /* FloatLabelTextField.swift */; };
 		263351311EE88B0300BA3773 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351301EE88B0300BA3773 /* Signup.swift */; };
 		263351331EE88B1B00BA3773 /* SignupVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351321EE88B1B00BA3773 /* SignupVIP.swift */; };
-		263351351EE88B3A00BA3773 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351341EE88B3A00BA3773 /* Login.swift */; };
-		263351371EE88B4D00BA3773 /* LoginVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351361EE88B4D00BA3773 /* LoginVIP.swift */; };
-		263351391EE88B6D00BA3773 /* ValidateEmailPasswordWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351381EE88B6D00BA3773 /* ValidateEmailPasswordWorker.swift */; };
-		2633513B1EE88B8200BA3773 /* ValidateEmailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633513A1EE88B8200BA3773 /* ValidateEmailWorker.swift */; };
 		263351441EE88C8500BA3773 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351431EE88C8500BA3773 /* ForgotPassword.swift */; };
 		263351461EE88C9700BA3773 /* ForgotPasswordVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351451EE88C9700BA3773 /* ForgotPasswordVIP.swift */; };
 		263351481EE8902F00BA3773 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351471EE8902F00BA3773 /* DatePickerDialog.swift */; };
+		2633514A1EE899D200BA3773 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351491EE899D200BA3773 /* Login.swift */; };
+		2633514C1EE899EA00BA3773 /* LoginVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633514B1EE899EA00BA3773 /* LoginVIP.swift */; };
+		2633514E1EE899FF00BA3773 /* ValidateEmailPasswordWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633514D1EE899FF00BA3773 /* ValidateEmailPasswordWorker.swift */; };
+		263351501EE89A1300BA3773 /* ValidateEmailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633514F1EE89A1300BA3773 /* ValidateEmailWorker.swift */; };
 		B07BA22CD5019C5B5885DD5C /* Pods_MyEventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC40B90715E09B68234BF2 /* Pods_MyEventsUITests.framework */; };
 		B57E2F36A488B579F4F1DAA0 /* Pods_MyEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D781BA9634FC89F2EFC7F3 /* Pods_MyEvents.framework */; };
 /* End PBXBuildFile section */
@@ -192,13 +192,13 @@
 		2617605B1EE753B4003BF367 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		263351301EE88B0300BA3773 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Signup.swift; path = ../../../../../../MonsterApps/Marco/iOs/Marco/Marco/Signup.swift; sourceTree = "<group>"; };
 		263351321EE88B1B00BA3773 /* SignupVIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupVIP.swift; path = ../../../../../../MonsterApps/Marco/iOs/Marco/Marco/SignupVIP.swift; sourceTree = "<group>"; };
-		263351341EE88B3A00BA3773 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Login.swift; path = ../../../../../../MonsterApps/Marco/iOs/Marco/Marco/Login.swift; sourceTree = "<group>"; };
-		263351361EE88B4D00BA3773 /* LoginVIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginVIP.swift; path = ../../../../../../MonsterApps/Marco/iOs/Marco/Marco/LoginVIP.swift; sourceTree = "<group>"; };
-		263351381EE88B6D00BA3773 /* ValidateEmailPasswordWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ValidateEmailPasswordWorker.swift; path = ../../../../../../MonsterApps/Marco/iOs/Marco/Marco/ValidateEmailPasswordWorker.swift; sourceTree = "<group>"; };
-		2633513A1EE88B8200BA3773 /* ValidateEmailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ValidateEmailWorker.swift; path = ../../../../../../MonsterApps/Marco/iOs/Marco/Marco/ValidateEmailWorker.swift; sourceTree = "<group>"; };
 		263351431EE88C8500BA3773 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		263351451EE88C9700BA3773 /* ForgotPasswordVIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVIP.swift; sourceTree = "<group>"; };
 		263351471EE8902F00BA3773 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerDialog.swift; path = "../../../../../../Downloads/DatePickerDialog-iOS-Swift-master/Sources/DatePickerDialog.swift"; sourceTree = "<group>"; };
+		263351491EE899D200BA3773 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		2633514B1EE899EA00BA3773 /* LoginVIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVIP.swift; sourceTree = "<group>"; };
+		2633514D1EE899FF00BA3773 /* ValidateEmailPasswordWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateEmailPasswordWorker.swift; sourceTree = "<group>"; };
+		2633514F1EE89A1300BA3773 /* ValidateEmailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateEmailWorker.swift; sourceTree = "<group>"; };
 		26C8FD7917687F4C7EB1293E /* Pods-MyEventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEventsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyEventsUITests/Pods-MyEventsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		94CFB0F0BAF6F511D89291CF /* Pods-MyEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEvents.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyEvents/Pods-MyEvents.release.xcconfig"; sourceTree = "<group>"; };
 		B70D38EB3F7DA4ED25930481 /* Pods-MyEventsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEventsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyEventsUITests/Pods-MyEventsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -439,10 +439,10 @@
 		261760481EE7049F003BF367 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				263351341EE88B3A00BA3773 /* Login.swift */,
-				263351361EE88B4D00BA3773 /* LoginVIP.swift */,
-				263351381EE88B6D00BA3773 /* ValidateEmailPasswordWorker.swift */,
-				2633513A1EE88B8200BA3773 /* ValidateEmailWorker.swift */,
+				263351491EE899D200BA3773 /* Login.swift */,
+				2633514B1EE899EA00BA3773 /* LoginVIP.swift */,
+				2633514D1EE899FF00BA3773 /* ValidateEmailPasswordWorker.swift */,
+				2633514F1EE89A1300BA3773 /* ValidateEmailWorker.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -704,7 +704,6 @@
 				26175F721EE70457003BF367 /* knScreenSize.swift in Sources */,
 				26175F361EE70456003BF367 /* AnimateItemCollectionLayout.swift in Sources */,
 				263351461EE88C9700BA3773 /* ForgotPasswordVIP.swift in Sources */,
-				263351351EE88B3A00BA3773 /* Login.swift in Sources */,
 				26175F691EE70456003BF367 /* knUITextField.swift in Sources */,
 				26175F6C1EE70457003BF367 /* knUIViewController.swift in Sources */,
 				26175F671EE70456003BF367 /* knUISearchBar.swift in Sources */,
@@ -714,8 +713,8 @@
 				26175F611EE70456003BF367 /* knUIButton.swift in Sources */,
 				26175F5F1EE70456003BF367 /* knString.swift in Sources */,
 				26175F731EE70457003BF367 /* LocationWorker.swift in Sources */,
-				263351371EE88B4D00BA3773 /* LoginVIP.swift in Sources */,
 				26175F5D1EE70456003BF367 /* knInt.swift in Sources */,
+				2633514A1EE899D200BA3773 /* Login.swift in Sources */,
 				26175F4A1EE70456003BF367 /* knCodeView.swift in Sources */,
 				26175F5C1EE70456003BF367 /* ValidationWorker.swift in Sources */,
 				26175F6B1EE70457003BF367 /* knUIView.swift in Sources */,
@@ -734,13 +733,14 @@
 				26175F441EE70456003BF367 /* GradientView.swift in Sources */,
 				263351441EE88C8500BA3773 /* ForgotPassword.swift in Sources */,
 				26175F391EE70456003BF367 /* knController.swift in Sources */,
+				2633514E1EE899FF00BA3773 /* ValidateEmailPasswordWorker.swift in Sources */,
 				26175F531EE70456003BF367 /* knShimmerView.swift in Sources */,
 				26175F751EE70457003BF367 /* ServiceConnector.swift in Sources */,
 				26175F5A1EE70456003BF367 /* TransitionSubmitButton.swift in Sources */,
-				2633513B1EE88B8200BA3773 /* ValidateEmailWorker.swift in Sources */,
 				26175F601EE70456003BF367 /* knUIApplication.swift in Sources */,
 				26175F761EE70457003BF367 /* Worker.swift in Sources */,
 				261760581EE74441003BF367 /* ExtensionUIImageView.swift in Sources */,
+				263351501EE89A1300BA3773 /* ValidateEmailWorker.swift in Sources */,
 				26175F591EE70456003BF367 /* SnakePageControl.swift in Sources */,
 				26175F5B1EE70456003BF367 /* Uploader.swift in Sources */,
 				263351331EE88B1B00BA3773 /* SignupVIP.swift in Sources */,
@@ -757,9 +757,9 @@
 				26175F471EE70456003BF367 /* knAnimationScrollView.swift in Sources */,
 				26175F701EE70457003BF367 /* JSONParser.swift in Sources */,
 				26175F491EE70456003BF367 /* knButton.swift in Sources */,
-				263351391EE88B6D00BA3773 /* ValidateEmailPasswordWorker.swift in Sources */,
 				26175F641EE70456003BF367 /* knUIImage.swift in Sources */,
 				26175F6E1EE70457003BF367 /* Error.swift in Sources */,
+				2633514C1EE899EA00BA3773 /* LoginVIP.swift in Sources */,
 				26175F581EE70456003BF367 /* RSKCollectionViewRetractableFirstItemLayout.swift in Sources */,
 				26175F4C1EE70456003BF367 /* knDotLoadingIndicator.swift in Sources */,
 				26175F401EE70456003BF367 /* knComposerView.swift in Sources */,
