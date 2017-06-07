@@ -9,6 +9,7 @@ target 'MyEvents' do
     pod 'GooglePlaces'
     pod 'GooglePlacePicker'
     pod 'GoogleMaps'
+
   # Pods for MyEvents
 
   target 'MyEventsUITests' do

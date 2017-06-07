@@ -48,17 +48,19 @@ class knDateDialog: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+    private convenience init() {
+        self.init(frame: .zero)
+    }
     
     weak var delegate: knDateDialogDelegate?
     
     static let center = knDateDialog()
     
-    lazy var backgroundView: UIView = { [weak self] in
+    private lazy var backgroundView: UIView = { [weak self] in
         
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .clear
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCancel)))
         view.isUserInteractionEnabled = true
@@ -66,7 +68,7 @@ class knDateDialog: UIView {
         
         }() /* backgroundView */
     
-    let datePicker: UIDatePicker = {
+    private let datePicker: UIDatePicker = {
         
         let dp = UIDatePicker()
         dp.datePickerMode = .dateAndTime
@@ -74,7 +76,7 @@ class knDateDialog: UIView {
         return dp
     }()
     
-    let messageBoxView: UIView = {
+    private let messageBoxView: UIView = {
         
         let view = UIView()
         view.backgroundColor = .white
@@ -82,7 +84,31 @@ class knDateDialog: UIView {
         return view
     }() /* messageBoxView */
     
-    func setupView() {
+    let setButton: UIButton = {
+        
+        let title = "SET APPOINTMENT!"
+        let color = knColors.kn_127
+        
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(color, for: .normal)
+        button.titleLabel?.font = knFonts.mediumFont
+        
+        let separator = UIView()
+        separator.translatesAutoresizingMaskIntoConstraints = false
+        separator.height(1)
+        separator.backgroundColor = knColors.kn_119_203_189
+        
+        button.addSubview(separator)
+        separator.horizontal(toView: button)
+        separator.top(toView: button)
+        
+        return button
+        
+    }()
+    
+    private func setupView() {
         
         let titleLabel: UILabel = {
             
@@ -97,29 +123,7 @@ class knDateDialog: UIView {
             return label
         }()
         
-        let setButton: UIButton = {
-            
-            let title = "SET APPOINTMENT!"
-            let color = knColors.kn_127
-            
-            let button = UIButton()
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.setTitle(title, for: .normal)
-            button.setTitleColor(color, for: .normal)
-            button.titleLabel?.font = knFonts.mediumFont
-            
-            let separator = UIView()
-            separator.translatesAutoresizingMaskIntoConstraints = false
-            separator.height(1)
-            separator.backgroundColor = knColors.kn_119_203_189
-            
-            button.addSubview(separator)
-            separator.horizontal(toView: button)
-            separator.top(toView: button)
-            
-            return button
-            
-        }()
+        
         setButton.addTarget(self, action: #selector(handleSetAppointment), for: .touchUpInside)
         
         messageBoxView.addSubview(titleLabel)
