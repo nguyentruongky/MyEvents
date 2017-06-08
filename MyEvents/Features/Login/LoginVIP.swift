@@ -98,8 +98,7 @@ extension meLoginController: meLoginPresenterOutput {
         
         func responseToFailValidation(_ error: knError) {
             loginButton.isEnabled = false
-            loginButton.backgroundColor = UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5)
-            
+
             var errorTextField: UITextField!
             
             switch error.code! {
@@ -121,7 +120,6 @@ extension meLoginController: meLoginPresenterOutput {
             let color141 = UIColor.color(value: 141)
             
             loginButton.isEnabled = true
-            loginButton.backgroundColor = UIColor.color(r: 141, g: 141, b: 141)
             
             emailTextField.viewWithTag(101)?.backgroundColor = color141
             passwordTextField.viewWithTag(101)?.backgroundColor = color141

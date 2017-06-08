@@ -10,6 +10,8 @@ import UIKit
 
 struct meSupporter {
 
+    
+
     static func makeActionButton(title: String, backgroundColor: UIColor = UIColor.color(value: 141)) -> UIButton {
 
         let button = UIButton()
@@ -55,6 +57,8 @@ struct meSupporter {
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.font = UIFont.systemFont(ofSize: 17)
         tf.textColor = UIColor.color(value: 74)
+        tf.autocorrectionType = .no
+        tf.autocapitalizationType = .none
         tf.placeholder = placeholder
         return tf
     }

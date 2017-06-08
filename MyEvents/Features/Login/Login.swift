@@ -43,7 +43,7 @@ final class meLoginController: knTableController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Forgot?", for: .normal)
         button.setTitleColor(UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5), for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         button.addTarget(self, action: #selector(handleForgotPassword), for: .touchUpInside)
         return button
         }()

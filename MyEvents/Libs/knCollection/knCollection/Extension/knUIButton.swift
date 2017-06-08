@@ -12,14 +12,21 @@ extension UIButton {
 
     func setBackgroundColor(color: UIColor, forState: UIControlState) {
 
-        let context = UIGraphicsGetCurrentContext()
-        UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
-        context?.setFillColor(color.cgColor)
-        context!.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
-        let colorImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        let colorImage = imageFromColor(colour: color)
 
         self.setBackgroundImage(colorImage, for: forState)
+    }
+
+    private func imageFromColor(colour: UIColor) -> UIImage
+    {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()!
+        context.setFillColor(colour.cgColor)
+        context.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
     }
 
     func animate(atPosition position: CGPoint) {

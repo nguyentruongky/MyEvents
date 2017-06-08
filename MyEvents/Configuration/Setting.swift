@@ -21,6 +21,8 @@ struct meSetting {
     
     static let baseUrl = ""
     static var firstController: UIViewController {
+
+        return meLoginController()
         
         let controller = didLogin == true ? meHomeManager() : UINavigationController(rootViewController: meLoginController())
         return controller
