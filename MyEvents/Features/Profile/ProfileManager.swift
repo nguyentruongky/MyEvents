@@ -22,13 +22,14 @@ class meProfileManager: knPagerController {
         return iv
     }()
     
-    let nameTextField: UITextField = {
+    lazy var nameTextField: UITextField = { [weak self] in
         
         let label = UITextField()
         label.text = "Ky Nguyen"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.textColor = .black
+        
         
         let imageView: UIImageView = {
             

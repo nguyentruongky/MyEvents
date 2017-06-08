@@ -54,7 +54,7 @@ extension UIViewController {
     @discardableResult
     func customBackArrow(tintColor: UIColor = .white) -> UIBarButtonItem {
         
-        let backArrowImageView = UIImageView(image: UIImage(named: "back_arrow")?.changeColor())
+        let backArrowImageView = UIImageView(image: UIImage(named: "back")?.changeColor())
         backArrowImageView.contentMode = .scaleAspectFit
         backArrowImageView.tintColor = tintColor
         let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 36))

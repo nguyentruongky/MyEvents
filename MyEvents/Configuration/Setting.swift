@@ -13,7 +13,8 @@ struct meSetting {
     static var currentUser: meUser? 
     
     static var didLogin: Bool {
-        return currentUser != nil
+//        return currentUser != nil
+        return true
     }
     
     static let placeApiKey = "AIzaSyAh9IFVETKbu3srSyWFtNHl2PgToJqrKMI"

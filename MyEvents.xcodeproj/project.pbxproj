@@ -11,6 +11,7 @@
 		1045B7481EE8FF3F00A9A456 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045B7471EE8FF3F00A9A456 /* HomeManager.swift */; };
 		1045B74A1EE903D700A9A456 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045B7491EE903D700A9A456 /* LoginWorker.swift */; };
 		1045B7511EE908E800A9A456 /* SignupWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045B7501EE908E800A9A456 /* SignupWorker.swift */; };
+		1045B7541EE90CF300A9A456 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045B7531EE90CF300A9A456 /* Filter.swift */; };
 		26175EC61EE70403003BF367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EC51EE70403003BF367 /* AppDelegate.swift */; };
 		26175ECD1EE70403003BF367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26175ECC1EE70403003BF367 /* Assets.xcassets */; };
 		26175ED01EE70403003BF367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26175ECE1EE70403003BF367 /* LaunchScreen.storyboard */; };
@@ -119,6 +120,7 @@
 		1045B7471EE8FF3F00A9A456 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		1045B7491EE903D700A9A456 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
 		1045B7501EE908E800A9A456 /* SignupWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWorker.swift; sourceTree = "<group>"; };
+		1045B7531EE90CF300A9A456 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		12D781BA9634FC89F2EFC7F3 /* Pods_MyEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26175EC21EE70403003BF367 /* MyEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26175EC51EE70403003BF367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +246,14 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		1045B7521EE90CEA00A9A456 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				1045B7531EE90CF300A9A456 /* Filter.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		26175EB91EE70403003BF367 = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +317,7 @@
 		26175EE71EE70431003BF367 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1045B7521EE90CEA00A9A456 /* Filter */,
 				1045B7461EE8FF3300A9A456 /* Manager */,
 				263351561EE89ADA00BA3773 /* Profile */,
 				261760541EE740A6003BF367 /* Events */,
@@ -750,6 +761,7 @@
 				26175F611EE70456003BF367 /* knUIButton.swift in Sources */,
 				26175F5F1EE70456003BF367 /* knString.swift in Sources */,
 				26175F731EE70457003BF367 /* LocationWorker.swift in Sources */,
+				1045B7541EE90CF300A9A456 /* Filter.swift in Sources */,
 				26175F5D1EE70456003BF367 /* knInt.swift in Sources */,
 				2633514A1EE899D200BA3773 /* Login.swift in Sources */,
 				26175F4A1EE70456003BF367 /* knCodeView.swift in Sources */,

@@ -117,6 +117,11 @@ class meNewEventController: knTableController {
     }
     
     override func setupView() {
+        
+        customBackArrow(tintColor: .blue)
+        
+        title = "New Event"
+        
         startDateTextField.delegate = self
         endDateTextField.delegate = self
         

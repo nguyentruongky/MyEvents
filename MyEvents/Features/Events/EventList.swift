@@ -48,11 +48,14 @@ class meEventListController: knTableController {
     }
     
     func handleAddEvent() {
-        
+        let controller = meNewEventController()
+        controller.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func handleFilter() {
-        
+        let controller = meFilterController()
+        present(controller, animated: true)
     }
     
     override func registerCells() {
