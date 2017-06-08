@@ -9,7 +9,11 @@
 import UIKit
 
 class meFilterController: knController {
-
+    
+    weak var eventList: meEventListController?
+    
+    var output : meFilterControllerOutput?
+    
     var startDate: Date?
 
     var endDate: Date?
@@ -58,7 +62,6 @@ class meFilterController: knController {
     
     internal lazy var applyButton: UIButton = { [weak self] in
         let button = meSupporter.makeActionButton(title: "Apply")
-        button.isEnabled = false
         button.addTarget(self, action: #selector(handleApplyFilter), for: .touchUpInside)
         return button
 
@@ -67,8 +70,8 @@ class meFilterController: knController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        meFilterConfiguration.shared.configure(viewController: self)
         setupView()
-        
     }
     
     override func setupView() {

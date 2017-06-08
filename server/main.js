@@ -69,6 +69,48 @@ app.get('/events', function(req, res) {
     })
 })
 
+app.post('/fetch_profile', function(req, res) {
+
+    let email = req.body.email
+    console.log(email)
+
+    db.collection('users').findOne({ 'email': email }, function(err, user) {
+
+        console.log(user)
+        if(err || user != null) {
+            res.send({ 'code': 200, 'data': user })
+        }
+        else {
+            res.send({ 'code': 404, 'message': 'not found' })   
+        }
+    })
+
+})
+
+app.post('/profile', function(req, res) {
+
+    let email = req.body.email
+    let name = req.body.name
+    let addresses = JSON.stringify(req.body.addresses)
+    console.log(addresses)
+
+    db.collection('users').findOne({ 'email': email }, function(err, user) {
+
+        console.log(user)
+        if(err || user != null) {
+            res.send({ 'code': 201, 'data': user })
+            db.collection('users').update({'email': email}, {$set: { 'name': name, 'addresses': addresses }}, function(err, result) {
+
+            })
+
+        }
+        else {
+            res.send({ 'code': 404, 'message': 'not found' })   
+        }
+    })
+
+})
+
 app.get('/filter', function(req, res) {
 
     let name = req.body.name
@@ -76,7 +118,11 @@ app.get('/filter', function(req, res) {
     let endDate = req.body.endDate
 
     let foundEvents = []
+    db.collection.createIndex({'name': 'text'})
     db.collection.find({ $text : {$search : name }}).toArray(function(err, events) {
+
+
+        console.log(events)
 
         for (var event in events) {
             if (event.startDate > startDate && event.endDate < endDate) {

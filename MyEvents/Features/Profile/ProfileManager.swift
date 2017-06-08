@@ -105,6 +105,7 @@ class meProfileManager: knPagerController {
         
         let events = meMyEventsController()
         let detail = mePersonalDetailController()
+        detail.profileManager = self
         
         setupPager(tabNames: ["My Events", "Personal Detail"],
                    tabControllers: [events, detail])

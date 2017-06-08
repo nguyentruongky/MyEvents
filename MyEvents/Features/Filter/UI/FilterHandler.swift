@@ -29,6 +29,8 @@ extension meFilterController {
     }
 
     func handleApplyFilter() {
-        
+        dismiss(animated: true)
+        guard let name = eventNameTextField.text, let start = startDate, let end = endDate else { return }
+        output?.filter(name: name, startDate: start, endDate: end)
     }
 }

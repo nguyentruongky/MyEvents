@@ -16,6 +16,10 @@ struct meAddressModel {
 
 class mePersonalDetailController: knTableController {
     
+    weak var profileManager: meProfileManager?
+    
+    var output : meUserDetailControllerOutput?
+    
     var datasource = [meAddressModel]()
 
     let emailTextField: FloatLabelTextField = {
@@ -36,9 +40,9 @@ class mePersonalDetailController: knTableController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        meUserDetailConfiguration.shared.configure(viewController: self)
         setupView()
-        fetchData()
     }
 
     override func setupView() {
@@ -82,12 +86,16 @@ class mePersonalDetailController: knTableController {
         tableView.register(meAddNewAddressCell.self, forCellReuseIdentifier: "meAddNewAddressCell")
     }
     
-    override func fetchData() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        datasource.append(meAddressModel(address: "Ton Duc Thang"))
-        datasource.append(meAddressModel(address: "Tran Phu"))
-        datasource.append(meAddressModel(address: "Le Dai Hanh"))
-        datasource.append(meAddressModel(address: "Tran Hung Dao "))
+        fetchData()
+    }
+    
+    override func fetchData() {
+        if let email = meSetting.currentUserEmail {
+            output?.fetchProfile(email: email)
+        }
         
     }
 }
