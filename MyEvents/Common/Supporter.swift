@@ -60,6 +60,16 @@ struct meSupporter {
         tf.autocorrectionType = .no
         tf.autocapitalizationType = .none
         tf.placeholder = placeholder
+        
+        let underline = UIView()
+        underline.tag = 101
+        underline.translatesAutoresizingMaskIntoConstraints = false
+        underline.backgroundColor = UIColor.color(value: 141)
+        
+        tf.addSubview(underline)
+        underline.horizontal(toView: tf)
+        underline.bottom(toView: tf)
+        underline.height(0.5)
         return tf
     }
 }

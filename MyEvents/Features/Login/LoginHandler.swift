@@ -13,6 +13,7 @@ import UIKit
 extension meLoginController {
 
     func handleLogin() {
+        
         output?.login(email: emailTextField.text!, password: passwordTextField.text!)
     }
 
@@ -23,7 +24,6 @@ extension meLoginController {
     }
 
     func handleSignup() {
-
         let controller = meSignupController()
         navigationController?.pushViewController(controller, animated: true)
     }

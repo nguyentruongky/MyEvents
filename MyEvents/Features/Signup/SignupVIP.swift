@@ -93,7 +93,6 @@ extension meSignupController: meSignupPresenterOutput {
         
         func responseToFailValidation(_ error: knError) {
             signupButton.isEnabled = false
-            signupButton.setTitleColor(UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5), for: .normal)
             
             var errorTextField: UITextField!
             

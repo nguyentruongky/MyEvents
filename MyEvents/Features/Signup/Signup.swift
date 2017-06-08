@@ -101,6 +101,7 @@ class meSignupController: knTableController {
         passwordTextField.verticalSpacing(toView: emailTextField, space: 24)
         emailTextField.height(toView: passwordTextField)
         
+        signupButton.height(44)
         signupButton.horizontal(toView: headerView, space: 16)
         signupButton.verticalSpacing(toView: passwordTextField, space: 16)
         

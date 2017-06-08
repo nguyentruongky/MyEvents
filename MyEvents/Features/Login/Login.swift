@@ -79,10 +79,11 @@ final class meLoginController: knTableController {
             return iv
         }()
 
-        let gradientViewHeight: CGFloat = screenHeight
+        let gradientViewHeight: CGFloat = 300
         let gradientView = UIView()
         gradientView.translatesAutoresizingMaskIntoConstraints = false
-        gradientView.setupGradientLayer(colors: [UIColor.clear, UIColor.white],
+        
+        gradientView.setupGradientLayer(colors: [UIColor.white.withAlphaComponent(0), UIColor.white],
                                         size: CGSize(width: screenWidth, height: gradientViewHeight),
                                         startPoint: CGPoint(x: 0.5, y: 0),
                                         endPoint: CGPoint(x: 0.5, y: 1))
@@ -106,7 +107,7 @@ final class meLoginController: knTableController {
         backgroundImageView.square()
         
         passwordTextField.horizontal(toView: headerView, space: 16)
-        passwordTextField.bottom(toView: backgroundImageView, space: DeviceType.IS_IPHONE_5 ? -16 : 0)
+        passwordTextField.bottom(toView: backgroundImageView, space: DeviceType.IS_IPHONE_5 ? -64 : -16)
         passwordTextField.height(36)
         
         emailTextField.horizontal(toView: passwordTextField)
