@@ -10,19 +10,19 @@ import UIKit
 
 struct meSetting {
     
+    static var currentUser: meUser? 
+    
+    static var didLogin: Bool {
+        return currentUser != nil
+    }
+    
     static let placeApiKey = "AIzaSyAh9IFVETKbu3srSyWFtNHl2PgToJqrKMI"
     
     static let baseUrl = ""
     static var firstController: UIViewController {
         
-        let testingTime = true
-        
-        if testingTime == true {
-            return UINavigationController(rootViewController: meProfileManager())
-        }
-        else {
-            return UIViewController()
-        }
+        let controller = didLogin == true ? meHomeManager() : UINavigationController(rootViewController: meLoginController())
+        return controller
     }
     
 }

@@ -29,12 +29,16 @@ class meEventListController: knTableController {
     }
     
     override func setupView() {
+        
+        navigationItem.title = "Upcoming events"
+        navigationController?.isNavigationBarHidden = false
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 250
         
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
-        tableView.contentInset = UIEdgeInsets(top: 80, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
         
         let addEventButton = UIBarButtonItem(image: #imageLiteral(resourceName: "add"), style: .done, target: self, action: #selector(handleAddEvent))
         navigationItem.leftBarButtonItem = addEventButton

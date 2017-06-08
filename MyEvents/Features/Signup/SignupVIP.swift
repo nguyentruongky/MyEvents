@@ -26,12 +26,18 @@ import UIKit
 protocol meSignupControllerOutput: class {
     
     func validate(email: String, password: String)
+    
+    func signup(email: String, password: String)
 }
 
 // 4
 protocol meSignupInteractorOutput: class {
     
     func finishedValidation(error: knError?)
+    
+    func signupSuccess(user: meUser)
+    
+    func signupFail(error: knError)
 }
 
 // 5
@@ -42,11 +48,21 @@ extension meSignupInteractor: meSignupControllerOutput {
         meValidateEmailPasswordWorker(email: email, password: password,
                                       completion: output?.finishedValidation).execute()
     }
+    
+    func signup(email: String, password: String) {
+        meSignupWorker(email: email, password: password,
+                       success: output?.signupSuccess, fail: output?.signupFail)
+        .execute()
+    }
 }
 
 // 6 - Define protocol to update directly to UI
 protocol meSignupPresenterOutput: class {
     func displayValidationResult(_ error: knError?)
+    
+    func displaySignupSuccess(user: meUser)
+    
+    func displaySignupFail(error: knError)
 }
 
 
@@ -55,6 +71,15 @@ extension meSignupPresenter: meSignupInteractorOutput {
     
     func finishedValidation(error: knError?) {
         output?.displayValidationResult(error)
+    }
+    
+    func signupSuccess(user: meUser) {
+        meSetting.currentUser = user
+        output?.displaySignupSuccess(user: user)
+    }
+    
+    func signupFail(error: knError) {
+        output?.displaySignupFail(error: error)
     }
 }
 
@@ -104,6 +129,19 @@ extension meSignupController: meSignupPresenterOutput {
         else {
             responseToFailValidation(error!)
         }
+    }
+    
+    func displaySignupSuccess(user: meUser) {
+        
+        let controller = meHomeManager()
+        present(controller, animated: true)
+        
+        appDelegate.window?.rootViewController = controller
+        
+    }
+    
+    func displaySignupFail(error: knError) {
+        // display error
     }
     
     

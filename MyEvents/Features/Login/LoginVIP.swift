@@ -26,12 +26,18 @@ import UIKit
 protocol meLoginControllerOutput: class {
     
     func validate(email: String, password: String)
+    
+    func login(email: String, password: String)
 }
 
 // 4
 protocol meLoginInteractorOutput: class {
     
     func finishedValidation(error: knError?)
+    
+    func loginSuccess(user: meUser)
+    
+    func loginFail(error: knError)
 }
 
 // 5
@@ -42,11 +48,22 @@ extension meLoginInteractor: meLoginControllerOutput {
         meValidateEmailPasswordWorker(email: email, password: password,
                                       completion: output?.finishedValidation).execute()
     }
+    
+    func login(email: String, password: String) {
+        meLoginWorker(email: email, password: password,
+                      success: output?.loginSuccess, fail: output?.loginFail)
+        .execute()
+    }
 }
 
 // 6 - Define protocol to update directly to UI
 protocol meLoginPresenterOutput: class {
+    
     func displayValidationResult(_ error: knError?)
+    
+    func loginSuccess(user: meUser)
+    
+    func loginFail(error: knError)
 }
 
 
@@ -55,6 +72,19 @@ extension meLoginPresenter: meLoginInteractorOutput {
     
     func finishedValidation(error: knError?) {
         output?.displayValidationResult(error)
+    }
+    
+    
+    func loginSuccess(user: meUser) {
+        
+        meSetting.currentUser = user
+        
+        output?.loginSuccess(user: user)
+        
+    }
+    
+    func loginFail(error: knError) {
+        loginFail(error: error)
     }
 }
 
@@ -68,7 +98,7 @@ extension meLoginController: meLoginPresenterOutput {
         
         func responseToFailValidation(_ error: knError) {
             loginButton.isEnabled = false
-            loginButton.setTitleColor(UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5), for: .normal)
+            loginButton.backgroundColor = UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5)
             
             var errorTextField: UITextField!
             
@@ -91,7 +121,7 @@ extension meLoginController: meLoginPresenterOutput {
             let color141 = UIColor.color(value: 141)
             
             loginButton.isEnabled = true
-            loginButton.setTitleColor(color141, for: .normal)
+            loginButton.backgroundColor = UIColor.color(r: 141, g: 141, b: 141)
             
             emailTextField.viewWithTag(101)?.backgroundColor = color141
             passwordTextField.viewWithTag(101)?.backgroundColor = color141
@@ -105,6 +135,19 @@ extension meLoginController: meLoginPresenterOutput {
             responseToFailValidation(error!)
         }
     }
+    
+    func loginSuccess(user: meUser) {
+        let controller = meHomeManager()
+        present(controller, animated: true)
+        
+        appDelegate.window?.rootViewController = controller
+    }
+    
+    
+    func loginFail(error: knError) {
+        // display error
+    }
+    
     
 }
 

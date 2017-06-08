@@ -73,15 +73,19 @@ class meSignupController: knTableController {
         let button = UIButton()
         button.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Next", for: .normal)
-        button.setTitleColor(UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5), for: .normal)
+        button.setTitle("Register", for: .normal)
+        button.backgroundColor = UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5)
+        button.createRoundCorner(22)
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         button.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
         return button
         }()
     
     func handleSignup() {
-        print("Signup tapped")
+        
+        
+        
     }
     
     override func viewDidLoad() {
@@ -103,6 +107,15 @@ class meSignupController: knTableController {
                                         startPoint: CGPoint(x: 0.5, y: 0),
                                         endPoint: CGPoint(x: 0.5, y: 1))
         
+        let backButton: UIButton = {
+            
+            let button = UIButton()
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.setImage(UIImage(named: "back"), for: .normal)
+            return button
+        }()
+        backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
+        
         let headerView = UIView()
         headerView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -111,6 +124,7 @@ class meSignupController: knTableController {
         headerView.addSubview(emailTextField)
         headerView.addSubview(passwordTextField)
         headerView.addSubview(signupButton)
+        headerView.addSubview(backButton)
         
         gradientView.horizontal(toView: headerView)
         gradientView.height(gradientViewHeight)
@@ -128,8 +142,11 @@ class meSignupController: knTableController {
         passwordTextField.verticalSpacing(toView: emailTextField, space: 24)
         emailTextField.height(toView: passwordTextField)
         
-        signupButton.right(toView: headerView, space: -16)
-        signupButton.verticalSpacing(toView: passwordTextField, space: 24)
+        signupButton.horizontal(toView: headerView, space: 16)
+        signupButton.verticalSpacing(toView: passwordTextField, space: 16)
+        
+        backButton.square(edge: 44)
+        backButton.topLeft(toView: headerView, top: 16, left: 8)
         
         headerView.height(screenHeight)
         

@@ -9,6 +9,22 @@
 
 import UIKit
 
+class meUser {
+    
+    var id: Int = 0
+    var profileImage: String
+    var name: String
+    var email: String
+    
+    var token: String?
+    
+    init(profileImage: String, name: String, email: String) {
+        self.profileImage = profileImage
+        self.name = name
+        self.email = email
+        id = 0
+    }
+}
 
 final class meLoginController: knTableController {
     
@@ -76,23 +92,35 @@ final class meLoginController: knTableController {
         button.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Log In", for: .normal)
-        button.setTitleColor(UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5), for: .normal)
+        button.backgroundColor = UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5)
+        button.createRoundCorner(22)
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
         }()
     
     func handleLogin() {
-        print("Login tapped")
+        output?.login(email: emailTextField.text!, password: passwordTextField.text!)
     }
     
-    fileprivate lazy var forgotPassword: UIButton = { [weak self] in
+    fileprivate lazy var forgotPasswordButton: UIButton = { [weak self] in
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Forgotten?", for: .normal)
+        button.setTitle("Forgot?", for: .normal)
         button.setTitleColor(UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5), for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
         button.addTarget(self, action: #selector(handleForgotPassword), for: .touchUpInside)
+        return button
+        }()
+    
+    fileprivate lazy var signupButton: UIButton = { [weak self] in
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Register new account", for: .normal)
+        button.setTitleColor(UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5), for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
+        button.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
         return button
         }()
     
@@ -100,6 +128,12 @@ final class meLoginController: knTableController {
         let controller = meForgotPasswordController()
         controller.email = emailTextField.text
         present(controller, animated: true)
+    }
+    
+    func handleSignup() {
+        
+        let controller = meSignupController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     override func viewDidLoad() {
@@ -129,7 +163,7 @@ final class meLoginController: knTableController {
         headerView.addSubview(emailTextField)
         headerView.addSubview(passwordTextField)
         headerView.addSubview(loginButton)
-        headerView.addSubview(forgotPassword)
+        headerView.addSubview(signupButton)
         
         gradientView.horizontal(toView: headerView)
         gradientView.height(gradientViewHeight)
@@ -147,11 +181,15 @@ final class meLoginController: knTableController {
         passwordTextField.verticalSpacing(toView: emailTextField, space: 24)
         emailTextField.height(toView: passwordTextField)
         
-        loginButton.right(toView: headerView, space: -16)
-        loginButton.verticalSpacing(toView: passwordTextField, space: 24)
+        loginButton.horizontal(toView: headerView, space: 16)
+        loginButton.verticalSpacing(toView: passwordTextField, space: 16)
+        loginButton.height(44)
         
-        forgotPassword.left(toView: headerView, space: 16)
-        forgotPassword.centerY(toView: loginButton)
+        passwordTextField.rightView = forgotPasswordButton
+        passwordTextField.rightViewMode = .always
+        
+        signupButton.centerX(toView: loginButton)
+        signupButton.verticalSpacing(toView: loginButton, space: 4)
         
         headerView.height(screenHeight)
         
@@ -194,7 +232,7 @@ extension meLoginController: UITextFieldDelegate {
         let newText = (textField.text! as NSString).replacingCharacters(in: range, with: string)
         
         NSObject.cancelPreviousPerformRequests(withTarget: self)
-        perform(#selector(prepareToValidate), with: (textField, newText), afterDelay: 0.5)
+        perform(#selector(prepareToValidate), with: (textField, newText), afterDelay: 0.15)
         
         textField.text = newText
         return false

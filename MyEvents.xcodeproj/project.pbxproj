@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1045B7451EE8F20E00A9A456 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045B7441EE8F1E600A9A456 /* DatePickerDialog.swift */; };
+		1045B7481EE8FF3F00A9A456 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045B7471EE8FF3F00A9A456 /* HomeManager.swift */; };
+		1045B74A1EE903D700A9A456 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045B7491EE903D700A9A456 /* LoginWorker.swift */; };
+		1045B7511EE908E800A9A456 /* SignupWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045B7501EE908E800A9A456 /* SignupWorker.swift */; };
 		26175EC61EE70403003BF367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EC51EE70403003BF367 /* AppDelegate.swift */; };
 		26175ECD1EE70403003BF367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26175ECC1EE70403003BF367 /* Assets.xcassets */; };
 		26175ED01EE70403003BF367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26175ECE1EE70403003BF367 /* LaunchScreen.storyboard */; };
@@ -85,7 +89,6 @@
 		2617605C1EE753B4003BF367 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2617605B1EE753B4003BF367 /* FloatLabelTextField.swift */; };
 		263351441EE88C8500BA3773 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351431EE88C8500BA3773 /* ForgotPassword.swift */; };
 		263351461EE88C9700BA3773 /* ForgotPasswordVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351451EE88C9700BA3773 /* ForgotPasswordVIP.swift */; };
-		263351481EE8902F00BA3773 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351471EE8902F00BA3773 /* DatePickerDialog.swift */; };
 		2633514A1EE899D200BA3773 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351491EE899D200BA3773 /* Login.swift */; };
 		2633514C1EE899EA00BA3773 /* LoginVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633514B1EE899EA00BA3773 /* LoginVIP.swift */; };
 		2633514E1EE899FF00BA3773 /* ValidateEmailPasswordWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633514D1EE899FF00BA3773 /* ValidateEmailPasswordWorker.swift */; };
@@ -112,6 +115,10 @@
 /* Begin PBXFileReference section */
 		0DDC40B90715E09B68234BF2 /* Pods_MyEventsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyEventsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EEB30F2F387311AFA5ED7F5 /* Pods-MyEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEvents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyEvents/Pods-MyEvents.debug.xcconfig"; sourceTree = "<group>"; };
+		1045B7441EE8F1E600A9A456 /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
+		1045B7471EE8FF3F00A9A456 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		1045B7491EE903D700A9A456 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		1045B7501EE908E800A9A456 /* SignupWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWorker.swift; sourceTree = "<group>"; };
 		12D781BA9634FC89F2EFC7F3 /* Pods_MyEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26175EC21EE70403003BF367 /* MyEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26175EC51EE70403003BF367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,7 +202,6 @@
 		2617605B1EE753B4003BF367 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		263351431EE88C8500BA3773 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		263351451EE88C9700BA3773 /* ForgotPasswordVIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVIP.swift; sourceTree = "<group>"; };
-		263351471EE8902F00BA3773 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerDialog.swift; path = "../../../../../../Downloads/DatePickerDialog-iOS-Swift-master/Sources/DatePickerDialog.swift"; sourceTree = "<group>"; };
 		263351491EE899D200BA3773 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		2633514B1EE899EA00BA3773 /* LoginVIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVIP.swift; sourceTree = "<group>"; };
 		2633514D1EE899FF00BA3773 /* ValidateEmailPasswordWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateEmailPasswordWorker.swift; sourceTree = "<group>"; };
@@ -230,6 +236,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1045B7461EE8FF3300A9A456 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1045B7471EE8FF3F00A9A456 /* HomeManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		26175EB91EE70403003BF367 = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +307,7 @@
 		26175EE71EE70431003BF367 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1045B7461EE8FF3300A9A456 /* Manager */,
 				263351561EE89ADA00BA3773 /* Profile */,
 				261760541EE740A6003BF367 /* Events */,
 				263351421EE88C4C00BA3773 /* ForgotPassword */,
@@ -305,8 +320,8 @@
 		26175EE81EE70437003BF367 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				1045B7441EE8F1E600A9A456 /* DatePickerDialog.swift */,
 				26175EEC1EE70456003BF367 /* knCollection */,
-				263351471EE8902F00BA3773 /* DatePickerDialog.swift */,
 				261760571EE74441003BF367 /* ExtensionUIImageView.swift */,
 				2617605B1EE753B4003BF367 /* FloatLabelTextField.swift */,
 				26175EEB1EE70456003BF367 /* knConstraints.swift */,
@@ -438,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				263351511EE89A6900BA3773 /* SignupVIP.swift */,
+				1045B7501EE908E800A9A456 /* SignupWorker.swift */,
 				263351531EE89A8200BA3773 /* Signup.swift */,
 			);
 			path = Signup;
@@ -447,6 +463,7 @@
 			isa = PBXGroup;
 			children = (
 				263351491EE899D200BA3773 /* Login.swift */,
+				1045B7491EE903D700A9A456 /* LoginWorker.swift */,
 				2633514B1EE899EA00BA3773 /* LoginVIP.swift */,
 				2633514D1EE899FF00BA3773 /* ValidateEmailPasswordWorker.swift */,
 				2633514F1EE89A1300BA3773 /* ValidateEmailWorker.swift */,
@@ -692,7 +709,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E2E418800B6AD560511C055A /* [CP] Check Pods Manifest.lock */ = {
@@ -707,7 +724,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -727,6 +744,7 @@
 				26175F671EE70456003BF367 /* knUISearchBar.swift in Sources */,
 				26175F4E1EE70456003BF367 /* knGistTextField.swift in Sources */,
 				26175F711EE70457003BF367 /* KeyboardManager.swift in Sources */,
+				1045B74A1EE903D700A9A456 /* LoginWorker.swift in Sources */,
 				263351521EE89A6900BA3773 /* SignupVIP.swift in Sources */,
 				26175EEA1EE70448003BF367 /* Setting.swift in Sources */,
 				26175F611EE70456003BF367 /* knUIButton.swift in Sources */,
@@ -741,6 +759,7 @@
 				26175F741EE70457003BF367 /* SafeJsonObject.swift in Sources */,
 				26175F4D1EE70456003BF367 /* knDraggableViewCollection.swift in Sources */,
 				26175EC61EE70403003BF367 /* AppDelegate.swift in Sources */,
+				1045B7511EE908E800A9A456 /* SignupWorker.swift in Sources */,
 				26175F5E1EE70456003BF367 /* knNSDate.swift in Sources */,
 				26175F631EE70456003BF367 /* knUIExtension.swift in Sources */,
 				26175F521EE70456003BF367 /* knRippleAnimationView.swift in Sources */,
@@ -761,11 +780,11 @@
 				261760581EE74441003BF367 /* ExtensionUIImageView.swift in Sources */,
 				263351501EE89A1300BA3773 /* ValidateEmailWorker.swift in Sources */,
 				26175F591EE70456003BF367 /* SnakePageControl.swift in Sources */,
+				1045B7481EE8FF3F00A9A456 /* HomeManager.swift in Sources */,
 				26175F5B1EE70456003BF367 /* Uploader.swift in Sources */,
 				26175F651EE70456003BF367 /* knUINavigationController.swift in Sources */,
 				26175F511EE70456003BF367 /* knPhotoSelector.swift in Sources */,
 				26175F3B1EE70456003BF367 /* knTableController.swift in Sources */,
-				263351481EE8902F00BA3773 /* DatePickerDialog.swift in Sources */,
 				26175F681EE70456003BF367 /* knUITableView.swift in Sources */,
 				2617605C1EE753B4003BF367 /* FloatLabelTextField.swift in Sources */,
 				26175F4F1EE70456003BF367 /* knLoadingView.swift in Sources */,
@@ -792,6 +811,7 @@
 				26175F351EE70456003BF367 /* knConstraints.swift in Sources */,
 				26175F381EE70456003BF367 /* knCollectionController.swift in Sources */,
 				26175F3D1EE70456003BF367 /* knViewBase.swift in Sources */,
+				1045B7451EE8F20E00A9A456 /* DatePickerDialog.swift in Sources */,
 				26175F6A1EE70456003BF367 /* knUITextView.swift in Sources */,
 				26175F561EE70456003BF367 /* knUnderlineTextField.swift in Sources */,
 				26175F3A1EE70456003BF367 /* knPagerController.swift in Sources */,

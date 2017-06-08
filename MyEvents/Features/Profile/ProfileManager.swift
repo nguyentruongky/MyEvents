@@ -22,15 +22,38 @@ class meProfileManager: knPagerController {
         return iv
     }()
     
-    let nameLabel: UILabel = {
+    let nameTextField: UITextField = {
         
-        let label = UILabel()
+        let label = UITextField()
         label.text = "Ky Nguyen"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.textColor = .black
+        
+        let imageView: UIImageView = {
+            
+            let imageName = "edit"
+            let iv = UIImageView(image: UIImage(named: imageName))
+            iv.translatesAutoresizingMaskIntoConstraints = false
+            iv.contentMode = .scaleAspectFit
+            iv.clipsToBounds = true
+            return iv
+        }()
+        
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleEditName)))
+        
+        
+        imageView.square(edge: 18)
+        label.rightView = imageView
+        label.rightViewMode = .always
+        
         return label
     }()
+    
+    func handleEditName() {
+        nameTextField.becomeFirstResponder()
+    }
     
     
     override func viewDidLoad() {
@@ -48,15 +71,15 @@ class meProfileManager: knPagerController {
         headerView.translatesAutoresizingMaskIntoConstraints = false
         
         headerView.addSubview(profileImageView)
-        headerView.addSubview(nameLabel)
+        headerView.addSubview(nameTextField)
         
         profileImageView.createRoundCorner(50)
         profileImageView.square(edge: 100)
         profileImageView.centerX(toView: headerView)
         profileImageView.top(toView: headerView, space: 32)
         
-        nameLabel.centerX(toView: profileImageView)
-        nameLabel.verticalSpacing(toView: profileImageView, space: 16)
+        nameTextField.centerX(toView: profileImageView)
+        nameTextField.verticalSpacing(toView: profileImageView, space: 16)
         
         
         view.addSubview(headerView)
