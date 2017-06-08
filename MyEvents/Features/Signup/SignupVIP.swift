@@ -115,7 +115,6 @@ extension meSignupController: meSignupPresenterOutput {
             let color141 = UIColor.color(value: 141)
             
             signupButton.isEnabled = true
-            signupButton.setTitleColor(color141, for: .normal)
             
             emailTextField.viewWithTag(101)?.backgroundColor = color141
             passwordTextField.viewWithTag(101)?.backgroundColor = color141
@@ -135,12 +134,11 @@ extension meSignupController: meSignupPresenterOutput {
         let controller = meHomeManager()
         present(controller, animated: true)
         
-        appDelegate.window?.rootViewController = controller
-        
     }
     
     func displaySignupFail(error: knError) {
         // display error
+        
     }
     
     

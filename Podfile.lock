@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.4.0)
   - GoogleMaps (2.2.0):
     - GoogleMaps/Maps (= 2.2.0)
   - GoogleMaps/Base (2.2.0)
@@ -12,17 +13,19 @@ PODS:
   - Kingfisher (3.5.1)
 
 DEPENDENCIES:
+  - Alamofire
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
   - Kingfisher
 
 SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
   GooglePlacePicker: 345b1aabd42c9d6d9bf2369c1bae1234d903e764
   GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
   Kingfisher: 12eeffeef42ea45b68c5e5acfe8ba9005b713ab4
 
-PODFILE CHECKSUM: 6ca18ea4539dfe97e3c7ca39567127eb8262c0fd
+PODFILE CHECKSUM: 46e4ee3649442bcb1476ab2481f1ae2b6a159654
 
 COCOAPODS: 1.1.1

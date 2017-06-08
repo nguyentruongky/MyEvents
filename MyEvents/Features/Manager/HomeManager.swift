@@ -15,9 +15,11 @@ class meHomeManager: UITabBarController {
         
         let events = UINavigationController(rootViewController: meEventListController())
         events.tabBarItem.title = "Events"
+        events.tabBarItem.image = #imageLiteral(resourceName: "calendar")
         
         let profile = UINavigationController(rootViewController: meProfileManager())
         profile.tabBarItem.title = "Profile"
+        profile.tabBarItem.image = #imageLiteral(resourceName: "profile")
         
         viewControllers = [ events, profile]
     }

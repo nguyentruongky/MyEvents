@@ -10,6 +10,7 @@ import Foundation
 
 struct meSignupWorker: knWorker {
     
+    let api = "/register"
     var email: String
     var password: String
     
@@ -18,7 +19,20 @@ struct meSignupWorker: knWorker {
     
     func execute() {
         
-        success?(meUser(profileImage: "", name: "", email: email))
+        func requestSuccess(returnData: AnyObject) {
+            print(returnData)
+            let user = meUser(profileImage: "", name: email, email: email)
+            success?(user)
+        }
+        
+        func requestError(_ error: knError) {
+            fail?(error)
+        }
+        
+        ServiceConnector.post(api, params: ["email": email, "password": password],
+                              success: requestSuccess, fail: requestError)
+        
+        
         
     }
     

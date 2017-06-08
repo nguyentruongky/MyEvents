@@ -137,8 +137,6 @@ extension meLoginController: meLoginPresenterOutput {
     func loginSuccess(user: meUser) {
         let controller = meHomeManager()
         present(controller, animated: true)
-        
-        appDelegate.window?.rootViewController = controller
     }
     
     

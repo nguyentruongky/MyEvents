@@ -27,7 +27,6 @@
 		26175EDB1EE70403003BF367 /* MyEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EDA1EE70403003BF367 /* MyEventsUITests.swift */; };
 		26175EEA1EE70448003BF367 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EE91EE70448003BF367 /* Setting.swift */; };
 		26175F351EE70456003BF367 /* knConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EEB1EE70456003BF367 /* knConstraints.swift */; };
-		26175F361EE70456003BF367 /* AnimateItemCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EEF1EE70456003BF367 /* AnimateItemCollectionLayout.swift */; };
 		26175F371EE70456003BF367 /* knCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EF11EE70456003BF367 /* knCell.swift */; };
 		26175F381EE70456003BF367 /* knCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EF21EE70456003BF367 /* knCollectionController.swift */; };
 		26175F391EE70456003BF367 /* knController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EF31EE70456003BF367 /* knController.swift */; };
@@ -36,36 +35,7 @@
 		26175F3C1EE70456003BF367 /* knView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EF61EE70456003BF367 /* knView.swift */; };
 		26175F3D1EE70456003BF367 /* knViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EF71EE70456003BF367 /* knViewBase.swift */; };
 		26175F3E1EE70456003BF367 /* PagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EF81EE70456003BF367 /* PagerController.swift */; };
-		26175F3F1EE70456003BF367 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 26175EFA1EE70456003BF367 /* camera.png */; };
-		26175F401EE70456003BF367 /* knComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EFB1EE70456003BF367 /* knComposerView.swift */; };
-		26175F411EE70456003BF367 /* micro.png in Resources */ = {isa = PBXBuildFile; fileRef = 26175EFC1EE70456003BF367 /* micro.png */; };
-		26175F421EE70456003BF367 /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = 26175EFD1EE70456003BF367 /* send.png */; };
-		26175F431EE70456003BF367 /* three_dot_vertical.png in Resources */ = {isa = PBXBuildFile; fileRef = 26175EFE1EE70456003BF367 /* three_dot_vertical.png */; };
-		26175F441EE70456003BF367 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175EFF1EE70456003BF367 /* GradientView.swift */; };
-		26175F451EE70456003BF367 /* KMPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F001EE70456003BF367 /* KMPlaceholderTextView.swift */; };
-		26175F461EE70456003BF367 /* knAnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F011EE70456003BF367 /* knAnalogClockView.swift */; };
-		26175F471EE70456003BF367 /* knAnimationScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F021EE70456003BF367 /* knAnimationScrollView.swift */; };
-		26175F481EE70456003BF367 /* knBarButtonNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F031EE70456003BF367 /* knBarButtonNumber.swift */; };
-		26175F491EE70456003BF367 /* knButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F041EE70456003BF367 /* knButton.swift */; };
-		26175F4A1EE70456003BF367 /* knCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F051EE70456003BF367 /* knCodeView.swift */; };
-		26175F4B1EE70456003BF367 /* knDateDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F061EE70456003BF367 /* knDateDialog.swift */; };
-		26175F4C1EE70456003BF367 /* knDotLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F071EE70456003BF367 /* knDotLoadingIndicator.swift */; };
-		26175F4D1EE70456003BF367 /* knDraggableViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F081EE70456003BF367 /* knDraggableViewCollection.swift */; };
-		26175F4E1EE70456003BF367 /* knGistTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F091EE70456003BF367 /* knGistTextField.swift */; };
-		26175F4F1EE70456003BF367 /* knLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F0A1EE70456003BF367 /* knLoadingView.swift */; };
-		26175F501EE70456003BF367 /* knPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F0B1EE70456003BF367 /* knPageViewController.swift */; };
 		26175F511EE70456003BF367 /* knPhotoSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F0C1EE70456003BF367 /* knPhotoSelector.swift */; };
-		26175F521EE70456003BF367 /* knRippleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F0D1EE70456003BF367 /* knRippleAnimationView.swift */; };
-		26175F531EE70456003BF367 /* knShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F0E1EE70456003BF367 /* knShimmerView.swift */; };
-		26175F541EE70456003BF367 /* knTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F0F1EE70456003BF367 /* knTagView.swift */; };
-		26175F551EE70456003BF367 /* knTwoCollumnsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F101EE70456003BF367 /* knTwoCollumnsCollectionViewLayout.swift */; };
-		26175F561EE70456003BF367 /* knUnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F111EE70456003BF367 /* knUnderlineTextField.swift */; };
-		26175F571EE70456003BF367 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F121EE70456003BF367 /* RecordView.swift */; };
-		26175F581EE70456003BF367 /* RSKCollectionViewRetractableFirstItemLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F131EE70456003BF367 /* RSKCollectionViewRetractableFirstItemLayout.swift */; };
-		26175F591EE70456003BF367 /* SnakePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F141EE70456003BF367 /* SnakePageControl.swift */; };
-		26175F5A1EE70456003BF367 /* TransitionSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F151EE70456003BF367 /* TransitionSubmitButton.swift */; };
-		26175F5B1EE70456003BF367 /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F161EE70456003BF367 /* Uploader.swift */; };
-		26175F5C1EE70456003BF367 /* ValidationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F171EE70456003BF367 /* ValidationWorker.swift */; };
 		26175F5D1EE70456003BF367 /* knInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F1A1EE70456003BF367 /* knInt.swift */; };
 		26175F5E1EE70456003BF367 /* knNSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F1B1EE70456003BF367 /* knNSDate.swift */; };
 		26175F5F1EE70456003BF367 /* knString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26175F1C1EE70456003BF367 /* knString.swift */; };
@@ -108,6 +78,10 @@
 		2633515A1EE89E3300BA3773 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263351591EE89E3300BA3773 /* ProfileManager.swift */; };
 		2633515E1EE8A06F00BA3773 /* MyEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633515D1EE8A06F00BA3773 /* MyEvents.swift */; };
 		263351601EE8A0A600BA3773 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633515F1EE8A0A600BA3773 /* UserDetail.swift */; };
+		26B2641E1EE9D56A00304DF1 /* NewEventVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2641D1EE9D56A00304DF1 /* NewEventVIP.swift */; };
+		26B264201EE9D5DF00304DF1 /* CreateEventWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2641F1EE9D5DF00304DF1 /* CreateEventWorker.swift */; };
+		26B264221EE9DAEF00304DF1 /* EventListVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B264211EE9DAEF00304DF1 /* EventListVIP.swift */; };
+		26B264241EE9DB3B00304DF1 /* FetchEventsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B264231EE9DB3B00304DF1 /* FetchEventsWorker.swift */; };
 		B07BA22CD5019C5B5885DD5C /* Pods_MyEventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC40B90715E09B68234BF2 /* Pods_MyEventsUITests.framework */; };
 		B57E2F36A488B579F4F1DAA0 /* Pods_MyEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D781BA9634FC89F2EFC7F3 /* Pods_MyEvents.framework */; };
 /* End PBXBuildFile section */
@@ -163,7 +137,6 @@
 		26175EDC1EE70403003BF367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26175EE91EE70448003BF367 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		26175EEB1EE70456003BF367 /* knConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knConstraints.swift; sourceTree = "<group>"; };
-		26175EEF1EE70456003BF367 /* AnimateItemCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateItemCollectionLayout.swift; sourceTree = "<group>"; };
 		26175EF11EE70456003BF367 /* knCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knCell.swift; sourceTree = "<group>"; };
 		26175EF21EE70456003BF367 /* knCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knCollectionController.swift; sourceTree = "<group>"; };
 		26175EF31EE70456003BF367 /* knController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knController.swift; sourceTree = "<group>"; };
@@ -172,36 +145,7 @@
 		26175EF61EE70456003BF367 /* knView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knView.swift; sourceTree = "<group>"; };
 		26175EF71EE70456003BF367 /* knViewBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knViewBase.swift; sourceTree = "<group>"; };
 		26175EF81EE70456003BF367 /* PagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerController.swift; sourceTree = "<group>"; };
-		26175EFA1EE70456003BF367 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
-		26175EFB1EE70456003BF367 /* knComposerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knComposerView.swift; sourceTree = "<group>"; };
-		26175EFC1EE70456003BF367 /* micro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = micro.png; sourceTree = "<group>"; };
-		26175EFD1EE70456003BF367 /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send.png; sourceTree = "<group>"; };
-		26175EFE1EE70456003BF367 /* three_dot_vertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = three_dot_vertical.png; sourceTree = "<group>"; };
-		26175EFF1EE70456003BF367 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		26175F001EE70456003BF367 /* KMPlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMPlaceholderTextView.swift; sourceTree = "<group>"; };
-		26175F011EE70456003BF367 /* knAnalogClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knAnalogClockView.swift; sourceTree = "<group>"; };
-		26175F021EE70456003BF367 /* knAnimationScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knAnimationScrollView.swift; sourceTree = "<group>"; };
-		26175F031EE70456003BF367 /* knBarButtonNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knBarButtonNumber.swift; sourceTree = "<group>"; };
-		26175F041EE70456003BF367 /* knButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knButton.swift; sourceTree = "<group>"; };
-		26175F051EE70456003BF367 /* knCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knCodeView.swift; sourceTree = "<group>"; };
-		26175F061EE70456003BF367 /* knDateDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knDateDialog.swift; sourceTree = "<group>"; };
-		26175F071EE70456003BF367 /* knDotLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knDotLoadingIndicator.swift; sourceTree = "<group>"; };
-		26175F081EE70456003BF367 /* knDraggableViewCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knDraggableViewCollection.swift; sourceTree = "<group>"; };
-		26175F091EE70456003BF367 /* knGistTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knGistTextField.swift; sourceTree = "<group>"; };
-		26175F0A1EE70456003BF367 /* knLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knLoadingView.swift; sourceTree = "<group>"; };
-		26175F0B1EE70456003BF367 /* knPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knPageViewController.swift; sourceTree = "<group>"; };
 		26175F0C1EE70456003BF367 /* knPhotoSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knPhotoSelector.swift; sourceTree = "<group>"; };
-		26175F0D1EE70456003BF367 /* knRippleAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knRippleAnimationView.swift; sourceTree = "<group>"; };
-		26175F0E1EE70456003BF367 /* knShimmerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knShimmerView.swift; sourceTree = "<group>"; };
-		26175F0F1EE70456003BF367 /* knTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knTagView.swift; sourceTree = "<group>"; };
-		26175F101EE70456003BF367 /* knTwoCollumnsCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knTwoCollumnsCollectionViewLayout.swift; sourceTree = "<group>"; };
-		26175F111EE70456003BF367 /* knUnderlineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knUnderlineTextField.swift; sourceTree = "<group>"; };
-		26175F121EE70456003BF367 /* RecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
-		26175F131EE70456003BF367 /* RSKCollectionViewRetractableFirstItemLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSKCollectionViewRetractableFirstItemLayout.swift; sourceTree = "<group>"; };
-		26175F141EE70456003BF367 /* SnakePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnakePageControl.swift; sourceTree = "<group>"; };
-		26175F151EE70456003BF367 /* TransitionSubmitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionSubmitButton.swift; sourceTree = "<group>"; };
-		26175F161EE70456003BF367 /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uploader.swift; sourceTree = "<group>"; };
-		26175F171EE70456003BF367 /* ValidationWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationWorker.swift; sourceTree = "<group>"; };
 		26175F1A1EE70456003BF367 /* knInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knInt.swift; sourceTree = "<group>"; };
 		26175F1B1EE70456003BF367 /* knNSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knNSDate.swift; sourceTree = "<group>"; };
 		26175F1C1EE70456003BF367 /* knString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knString.swift; sourceTree = "<group>"; };
@@ -244,6 +188,10 @@
 		263351591EE89E3300BA3773 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		2633515D1EE8A06F00BA3773 /* MyEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEvents.swift; sourceTree = "<group>"; };
 		2633515F1EE8A0A600BA3773 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		26B2641D1EE9D56A00304DF1 /* NewEventVIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventVIP.swift; sourceTree = "<group>"; };
+		26B2641F1EE9D5DF00304DF1 /* CreateEventWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventWorker.swift; sourceTree = "<group>"; };
+		26B264211EE9DAEF00304DF1 /* EventListVIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListVIP.swift; sourceTree = "<group>"; };
+		26B264231EE9DB3B00304DF1 /* FetchEventsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEventsWorker.swift; sourceTree = "<group>"; };
 		26C8FD7917687F4C7EB1293E /* Pods-MyEventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEventsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyEventsUITests/Pods-MyEventsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		94CFB0F0BAF6F511D89291CF /* Pods-MyEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEvents.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyEvents/Pods-MyEvents.release.xcconfig"; sourceTree = "<group>"; };
 		B70D38EB3F7DA4ED25930481 /* Pods-MyEventsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEventsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyEventsUITests/Pods-MyEventsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -355,6 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				108C663D1EE939AE0038A976 /* EventModel.swift */,
+				26B264211EE9DAEF00304DF1 /* EventListVIP.swift */,
+				26B264231EE9DB3B00304DF1 /* FetchEventsWorker.swift */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -362,8 +312,8 @@
 		108C66441EE93A400038A976 /* NewEvent */ = {
 			isa = PBXGroup;
 			children = (
-				261760591EE74A4D003BF367 /* NewEvent.swift */,
-				108C66451EE93D960038A976 /* NewEventHandler.swift */,
+				26B2641C1EE9D55A00304DF1 /* Logic */,
+				26B2641B1EE9D55000304DF1 /* UI */,
 			);
 			name = NewEvent;
 			sourceTree = "<group>";
@@ -502,33 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				26175EF01EE70456003BF367 /* BaseControl */,
-				26175EF91EE70456003BF367 /* ComposerView */,
-				26175EEF1EE70456003BF367 /* AnimateItemCollectionLayout.swift */,
-				26175EFF1EE70456003BF367 /* GradientView.swift */,
-				26175F001EE70456003BF367 /* KMPlaceholderTextView.swift */,
-				26175F131EE70456003BF367 /* RSKCollectionViewRetractableFirstItemLayout.swift */,
-				26175F121EE70456003BF367 /* RecordView.swift */,
-				26175F141EE70456003BF367 /* SnakePageControl.swift */,
-				26175F151EE70456003BF367 /* TransitionSubmitButton.swift */,
-				26175F161EE70456003BF367 /* Uploader.swift */,
-				26175F171EE70456003BF367 /* ValidationWorker.swift */,
-				26175F011EE70456003BF367 /* knAnalogClockView.swift */,
-				26175F021EE70456003BF367 /* knAnimationScrollView.swift */,
-				26175F031EE70456003BF367 /* knBarButtonNumber.swift */,
-				26175F041EE70456003BF367 /* knButton.swift */,
-				26175F051EE70456003BF367 /* knCodeView.swift */,
-				26175F061EE70456003BF367 /* knDateDialog.swift */,
-				26175F071EE70456003BF367 /* knDotLoadingIndicator.swift */,
-				26175F081EE70456003BF367 /* knDraggableViewCollection.swift */,
-				26175F091EE70456003BF367 /* knGistTextField.swift */,
-				26175F0A1EE70456003BF367 /* knLoadingView.swift */,
-				26175F0B1EE70456003BF367 /* knPageViewController.swift */,
 				26175F0C1EE70456003BF367 /* knPhotoSelector.swift */,
-				26175F0D1EE70456003BF367 /* knRippleAnimationView.swift */,
-				26175F0E1EE70456003BF367 /* knShimmerView.swift */,
-				26175F0F1EE70456003BF367 /* knTagView.swift */,
-				26175F101EE70456003BF367 /* knTwoCollumnsCollectionViewLayout.swift */,
-				26175F111EE70456003BF367 /* knUnderlineTextField.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -546,18 +470,6 @@
 				26175EF71EE70456003BF367 /* knViewBase.swift */,
 			);
 			path = BaseControl;
-			sourceTree = "<group>";
-		};
-		26175EF91EE70456003BF367 /* ComposerView */ = {
-			isa = PBXGroup;
-			children = (
-				26175EFA1EE70456003BF367 /* camera.png */,
-				26175EFB1EE70456003BF367 /* knComposerView.swift */,
-				26175EFC1EE70456003BF367 /* micro.png */,
-				26175EFD1EE70456003BF367 /* send.png */,
-				26175EFE1EE70456003BF367 /* three_dot_vertical.png */,
-			);
-			path = ComposerView;
 			sourceTree = "<group>";
 		};
 		26175F191EE70456003BF367 /* Extension */ = {
@@ -652,6 +564,24 @@
 				108C664B1EE93ECA0038A976 /* UserDetail */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		26B2641B1EE9D55000304DF1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				261760591EE74A4D003BF367 /* NewEvent.swift */,
+				108C66451EE93D960038A976 /* NewEventHandler.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		26B2641C1EE9D55A00304DF1 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				26B2641D1EE9D56A00304DF1 /* NewEventVIP.swift */,
+				26B2641F1EE9D5DF00304DF1 /* CreateEventWorker.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		6E03862695F5494EF1E1AA38 /* Frameworks */ = {
@@ -767,10 +697,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				26175ED01EE70403003BF367 /* LaunchScreen.storyboard in Resources */,
-				26175F421EE70456003BF367 /* send.png in Resources */,
-				26175F3F1EE70456003BF367 /* camera.png in Resources */,
-				26175F411EE70456003BF367 /* micro.png in Resources */,
-				26175F431EE70456003BF367 /* three_dot_vertical.png in Resources */,
 				26175ECD1EE70403003BF367 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -882,15 +808,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B264201EE9D5DF00304DF1 /* CreateEventWorker.swift in Sources */,
 				26175F661EE70456003BF367 /* knUIScrollView.swift in Sources */,
 				26175F721EE70457003BF367 /* knScreenSize.swift in Sources */,
 				2633515A1EE89E3300BA3773 /* ProfileManager.swift in Sources */,
-				26175F361EE70456003BF367 /* AnimateItemCollectionLayout.swift in Sources */,
 				263351461EE88C9700BA3773 /* ForgotPasswordVIP.swift in Sources */,
 				26175F691EE70456003BF367 /* knUITextField.swift in Sources */,
 				26175F6C1EE70457003BF367 /* knUIViewController.swift in Sources */,
 				26175F671EE70456003BF367 /* knUISearchBar.swift in Sources */,
-				26175F4E1EE70456003BF367 /* knGistTextField.swift in Sources */,
 				26175F711EE70457003BF367 /* KeyboardManager.swift in Sources */,
 				1045B74A1EE903D700A9A456 /* LoginWorker.swift in Sources */,
 				263351521EE89A6900BA3773 /* SignupVIP.swift in Sources */,
@@ -901,69 +826,49 @@
 				1045B7541EE90CF300A9A456 /* Filter.swift in Sources */,
 				26175F5D1EE70456003BF367 /* knInt.swift in Sources */,
 				2633514A1EE899D200BA3773 /* Login.swift in Sources */,
-				26175F4A1EE70456003BF367 /* knCodeView.swift in Sources */,
-				26175F5C1EE70456003BF367 /* ValidationWorker.swift in Sources */,
 				26175F6B1EE70457003BF367 /* knUIView.swift in Sources */,
-				26175F551EE70456003BF367 /* knTwoCollumnsCollectionViewLayout.swift in Sources */,
+				26B264241EE9DB3B00304DF1 /* FetchEventsWorker.swift in Sources */,
 				26175F741EE70457003BF367 /* SafeJsonObject.swift in Sources */,
 				108C66351EE934230038A976 /* LoginHandler.swift in Sources */,
-				26175F4D1EE70456003BF367 /* knDraggableViewCollection.swift in Sources */,
 				26175EC61EE70403003BF367 /* AppDelegate.swift in Sources */,
 				1045B7511EE908E800A9A456 /* SignupWorker.swift in Sources */,
 				26175F5E1EE70456003BF367 /* knNSDate.swift in Sources */,
 				26175F631EE70456003BF367 /* knUIExtension.swift in Sources */,
-				26175F521EE70456003BF367 /* knRippleAnimationView.swift in Sources */,
 				26175F3E1EE70456003BF367 /* PagerController.swift in Sources */,
-				26175F541EE70456003BF367 /* knTagView.swift in Sources */,
 				261760561EE740AE003BF367 /* EventList.swift in Sources */,
-				26175F461EE70456003BF367 /* knAnalogClockView.swift in Sources */,
 				26175F621EE70456003BF367 /* knUIColor.swift in Sources */,
-				26175F441EE70456003BF367 /* GradientView.swift in Sources */,
 				108C66331EE9323D0038A976 /* UserModel.swift in Sources */,
 				263351441EE88C8500BA3773 /* ForgotPassword.swift in Sources */,
 				26175F391EE70456003BF367 /* knController.swift in Sources */,
 				108C664F1EE93F980038A976 /* FilterHandler.swift in Sources */,
 				2633514E1EE899FF00BA3773 /* ValidateEmailPasswordWorker.swift in Sources */,
-				26175F531EE70456003BF367 /* knShimmerView.swift in Sources */,
 				26175F751EE70457003BF367 /* ServiceConnector.swift in Sources */,
-				26175F5A1EE70456003BF367 /* TransitionSubmitButton.swift in Sources */,
 				26175F601EE70456003BF367 /* knUIApplication.swift in Sources */,
 				26175F761EE70457003BF367 /* Worker.swift in Sources */,
 				261760581EE74441003BF367 /* ExtensionUIImageView.swift in Sources */,
 				108C66461EE93D960038A976 /* NewEventHandler.swift in Sources */,
 				108C664A1EE93EB20038A976 /* UserAddressCell.swift in Sources */,
 				263351501EE89A1300BA3773 /* ValidateEmailWorker.swift in Sources */,
-				26175F591EE70456003BF367 /* SnakePageControl.swift in Sources */,
 				108C663E1EE939AE0038A976 /* EventModel.swift in Sources */,
 				1045B7481EE8FF3F00A9A456 /* HomeManager.swift in Sources */,
-				26175F5B1EE70456003BF367 /* Uploader.swift in Sources */,
+				26B2641E1EE9D56A00304DF1 /* NewEventVIP.swift in Sources */,
 				26175F651EE70456003BF367 /* knUINavigationController.swift in Sources */,
 				26175F511EE70456003BF367 /* knPhotoSelector.swift in Sources */,
 				26175F3B1EE70456003BF367 /* knTableController.swift in Sources */,
 				26175F681EE70456003BF367 /* knUITableView.swift in Sources */,
 				2617605C1EE753B4003BF367 /* FloatLabelTextField.swift in Sources */,
-				26175F4F1EE70456003BF367 /* knLoadingView.swift in Sources */,
 				2633515E1EE8A06F00BA3773 /* MyEvents.swift in Sources */,
 				2617605A1EE74A4D003BF367 /* NewEvent.swift in Sources */,
-				26175F451EE70456003BF367 /* KMPlaceholderTextView.swift in Sources */,
-				26175F481EE70456003BF367 /* knBarButtonNumber.swift in Sources */,
-				26175F471EE70456003BF367 /* knAnimationScrollView.swift in Sources */,
 				26175F701EE70457003BF367 /* JSONParser.swift in Sources */,
-				26175F491EE70456003BF367 /* knButton.swift in Sources */,
 				26175F641EE70456003BF367 /* knUIImage.swift in Sources */,
 				26175F6E1EE70457003BF367 /* Error.swift in Sources */,
 				263351541EE89A8200BA3773 /* Signup.swift in Sources */,
 				2633514C1EE899EA00BA3773 /* LoginVIP.swift in Sources */,
 				108C66481EE93E760038A976 /* UserDetailHandler.swift in Sources */,
-				26175F581EE70456003BF367 /* RSKCollectionViewRetractableFirstItemLayout.swift in Sources */,
-				26175F4C1EE70456003BF367 /* knDotLoadingIndicator.swift in Sources */,
-				26175F401EE70456003BF367 /* knComposerView.swift in Sources */,
-				26175F501EE70456003BF367 /* knPageViewController.swift in Sources */,
 				26175F6D1EE70457003BF367 /* AlamofireConnector.swift in Sources */,
+				26B264221EE9DAEF00304DF1 /* EventListVIP.swift in Sources */,
 				26175F6F1EE70457003BF367 /* GlobalSupporter.swift in Sources */,
 				108C66391EE938F10038A976 /* SignupHandler.swift in Sources */,
-				26175F4B1EE70456003BF367 /* knDateDialog.swift in Sources */,
-				26175F571EE70456003BF367 /* RecordView.swift in Sources */,
 				26175F3C1EE70456003BF367 /* knView.swift in Sources */,
 				26175F351EE70456003BF367 /* knConstraints.swift in Sources */,
 				26175F381EE70456003BF367 /* knCollectionController.swift in Sources */,
@@ -971,7 +876,6 @@
 				108C66401EE939FE0038A976 /* EventCell.swift in Sources */,
 				1045B7451EE8F20E00A9A456 /* DatePickerDialog.swift in Sources */,
 				26175F6A1EE70456003BF367 /* knUITextView.swift in Sources */,
-				26175F561EE70456003BF367 /* knUnderlineTextField.swift in Sources */,
 				26175F3A1EE70456003BF367 /* knPagerController.swift in Sources */,
 				261760531EE70DAF003BF367 /* Supporter.swift in Sources */,
 				263351601EE8A0A600BA3773 /* UserDetail.swift in Sources */,

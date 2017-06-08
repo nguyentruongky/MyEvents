@@ -9,7 +9,11 @@
 import UIKit
 
 class meNewEventController: knTableController {
-
+    
+    var output : meNewEventControllerOutput?
+    
+    weak var eventList: meEventListController?
+    
     var startDate: Date?
 
     var endDate: Date?
@@ -77,6 +81,7 @@ class meNewEventController: knTableController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        meNewEventConfiguration.shared.configure(viewController: self)
         setupView()
         fetchData()
     }
@@ -102,7 +107,16 @@ class meNewEventController: knTableController {
         datasource.append(makeTextFieldCell(textField: endDateTextField))
         datasource.append(makeTextFieldCell(textField: addressTextField))
         
+        eventNameTextField.viewWithTag(101)?.removeFromSuperview()
+        startDateTextField.viewWithTag(101)?.removeFromSuperview()
+        endDateTextField.viewWithTag(101)?.removeFromSuperview()
+        addressTextField.viewWithTag(101)?.removeFromSuperview()
+        
         tableView.reloadData()
+        
+        let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(handleCreateEvent))
+        navigationItem.rightBarButtonItem = saveButton
+        
     }
     
     override func fetchData() {

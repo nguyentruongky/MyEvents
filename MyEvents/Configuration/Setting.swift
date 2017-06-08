@@ -10,19 +10,32 @@ import UIKit
 
 struct meSetting {
     
-    static var currentUser: meUser? 
+    static var currentUser: meUser? {
+        didSet {
+            currentUserEmail = currentUser?.email
+        }
+    }
+    
+    static var currentUserEmail: String? {
+        get {
+            let user = UserDefaults.standard.value(forKeyPath: "currentUserEmail") as? String
+            return user
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKeyPath: "currentUserEmail")
+        }
+    }
     
     static var didLogin: Bool {
-//        return currentUser != nil
-        return true
+        return currentUserEmail != nil
     }
     
     static let placeApiKey = "AIzaSyAh9IFVETKbu3srSyWFtNHl2PgToJqrKMI"
     
-    static let baseUrl = ""
+    static let baseUrl = "http://127.0.0.1:3000"
     static var firstController: UIViewController {
 
-        return UINavigationController(rootViewController: meLoginController())
+//        return UINavigationController(rootViewController: meLoginController())
         
         let controller = didLogin == true ? meHomeManager() : UINavigationController(rootViewController: meLoginController())
         return controller

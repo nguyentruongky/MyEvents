@@ -34,7 +34,11 @@ extension meNewEventController {
         controller.delegate = self
         present(controller, animated: true)
     }
-
+    
+    func handleCreateEvent() {
+        guard let name = eventNameTextField.text, let startDate = startDate, let endDate = endDate else { return }
+        output?.createEvent(name: name, startDate: startDate, endDate: endDate)
+    }
 }
 
 extension meNewEventController: GMSAutocompleteViewControllerDelegate {

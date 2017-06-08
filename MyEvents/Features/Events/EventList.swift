@@ -10,11 +10,14 @@ import UIKit
 
 class meEventListController: knTableController {
     
+    var output : meEventListControllerOutput?
+
     var datasource = [meEventModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        meEventListConfiguration.shared.configure(viewController: self)
         setupView()
         fetchData()
     }
@@ -45,14 +48,7 @@ class meEventListController: knTableController {
     }
     
     override func fetchData() {
-        
-        for _ in 0 ..< 10 {
-            datasource.append(meEventModel(name: "Dr. Ted Malloch on “What the new US Presidential administration means for Brexit and the EU”",
-                                           startDate: "23rd May 2017 2:00", endDate: "4:00 pm",
-                                           address: "Head of Open Europe Brussels VZW", image: "http://2ihmoy1d3v7630ar9h2rsglp.wpengine.netdna-cdn.com/wp-content/uploads/2017/03/Article-50-Brussels-event.jpg"))
-        }
-        
-        tableView.reloadData()
+        output?.fetchList()
     }
 }
 
@@ -63,6 +59,7 @@ extension meEventListController {
     func handleAddEvent() {
         let controller = meNewEventController()
         controller.hidesBottomBarWhenPushed = true
+        controller.eventList = self
         navigationController?.pushViewController(controller, animated: true)
     }
 

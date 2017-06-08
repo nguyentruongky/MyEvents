@@ -8,7 +8,7 @@
 
 import Foundation
 
-class meUser {
+struct meUser {
 
     var id: Int = 0
     var profileImage: String

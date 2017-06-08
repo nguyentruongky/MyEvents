@@ -16,7 +16,12 @@ final class meEventItemCell: knTableCell {
             guard let data = data else { return }
             eventImageView.downloadImage(from: data.image, placeholder: #imageLiteral(resourceName: "event_placeholder"))
             nameLabel.text = data.name
-            timeLabel.text = "\(data.startDate) - \(data.endDate)"
+            if let start = data.startDate, let end = data.endDate {
+                timeLabel.text = "\(start) to \(end)"
+            }
+            else {
+                timeLabel.text = "Some dates"
+            }
             addressLabel.text = data.address
         }
     }

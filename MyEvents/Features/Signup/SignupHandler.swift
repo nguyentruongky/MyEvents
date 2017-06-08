@@ -12,7 +12,7 @@ import UIKit
 extension meSignupController {
 
     func handleSignup() {
-
+        output?.signup(email: emailTextField.text!, password: passwordTextField.text!)
     }
 
 }
@@ -25,7 +25,7 @@ extension meSignupController: UITextFieldDelegate {
         let newText = (textField.text! as NSString).replacingCharacters(in: range, with: string)
 
         NSObject.cancelPreviousPerformRequests(withTarget: self)
-        perform(#selector(prepareToValidate), with: (textField, newText), afterDelay: 0.5)
+        perform(#selector(prepareToValidate), with: (textField, newText), afterDelay: 0.15)
 
         textField.text = newText
         return false
