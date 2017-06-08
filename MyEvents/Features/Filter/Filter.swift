@@ -9,15 +9,16 @@
 import UIKit
 
 class meFilterController: knController {
-    
-    let eventNameTextField = meNewEventController.makeTextField(placeholder: "Event name")
-    
+
     var startDate: Date?
+
     var endDate: Date?
-    
+
+    let eventNameTextField = meSupporter.makeFloatTextField(placeholder: "Event name")
+
     lazy var startDateTextField: UITextField = { [weak self] in
         
-        let tf =  meNewEventController.makeTextField(placeholder: "Start date")
+        let tf =  meSupporter.makeFloatTextField(placeholder: "Start date")
         tf.translatesAutoresizingMaskIntoConstraints = false
         
         let button = UIButton()
@@ -29,19 +30,10 @@ class meFilterController: knController {
         
         return tf
         }()
-    
-    func handlePickStartDate() {
-        DatePickerDialog().show("Select Start date", doneButtonTitle: "Confirm", cancelButtonTitle: "Cancel", defaultDate: Date(), datePickerMode: .dateAndTime, callback: { [weak self] date in
-            
-            guard let _self = self, let date = date else { return }
-            _self.startDateTextField.text = date.toString("MM/dd/yyyy - hh:mm a")
-            _self.startDate = date
-        })
-    }
-    
+
     lazy var endDateTextField: UITextField = { [weak self] in
         
-        let tf =  meNewEventController.makeTextField(placeholder: "End date")
+        let tf =  meSupporter.makeFloatTextField(placeholder: "End date")
         tf.translatesAutoresizingMaskIntoConstraints = false
         
         let button = UIButton()
@@ -53,16 +45,7 @@ class meFilterController: knController {
         
         return tf
         }()
-    
-    func handlePickEndDate() {
-        DatePickerDialog().show("Select End date", doneButtonTitle: "Confirm", cancelButtonTitle: "Cancel", defaultDate: Date(), datePickerMode: .dateAndTime, callback: { [weak self] date in
-            
-            guard let _self = self, let date = date else { return }
-            _self.endDateTextField.text = date.toString("MM/dd/yyyy - hh:mm a")
-            _self.endDate = date
-        })
-    }
-    
+
     let titleLabel: UILabel = {
         
         let label = UILabel()
@@ -74,22 +57,13 @@ class meFilterController: knController {
     }()
     
     internal lazy var applyButton: UIButton = { [weak self] in
-        let button = UIButton()
+        let button = meSupporter.makeActionButton(title: "Apply")
         button.isEnabled = false
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Apply", for: .normal)
-        button.backgroundColor = UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5)
-        button.createRoundCorner(22)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         button.addTarget(self, action: #selector(handleApplyFilter), for: .touchUpInside)
         return button
+
         }()
-    
-    func handleApplyFilter() {
-        
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

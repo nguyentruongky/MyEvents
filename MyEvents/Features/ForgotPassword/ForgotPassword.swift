@@ -18,38 +18,21 @@ class meForgotPasswordController: knController {
             emailTextField.text = email
         }
     }
-    
-    let emailTextField: UITextField = {
-        
-        let tf = UITextField()
-        tf.placeholder = "Email"
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.font = UIFont.systemFont(ofSize: 17)
-        tf.textColor = .white
-        tf.autocorrectionType = .no
-        tf.autocapitalizationType = .none
+
+    internal lazy var emailTextField: UITextField = { [weak self] in
+
+        let tf = meSupporter.makeFloatTextField(placeholder: "Email")
         tf.keyboardType = .emailAddress
-        tf.tintColor = .white
-        
-        let underline = UIView()
-        underline.tag = 101
-        underline.translatesAutoresizingMaskIntoConstraints = false
-        underline.backgroundColor = .white
-        
-        tf.addSubview(underline)
-        underline.horizontal(toView: tf)
-        underline.bottom(toView: tf)
-        underline.height(0.5)
-        
+
         if let placeholder = tf.placeholder {
             let attribute = [NSForegroundColorAttributeName: UIColor.white]
             tf.attributedPlaceholder = NSAttributedString(string:placeholder, attributes: attribute)
         }
-        
-        
+
         return tf
-    }()
-    
+
+        }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -128,17 +111,20 @@ class meForgotPasswordController: knController {
         resetButton.verticalSpacing(toView: emailTextField, space: 24)
         resetButton.height(50)
     }
-    
+
+}
+
+/* action manager */
+extension meForgotPasswordController {
+
     func handleDismiss() {
         dismiss(animated: true)
     }
-    
+
     func handleReset() {
         
     }
 }
-
-
 
 
 

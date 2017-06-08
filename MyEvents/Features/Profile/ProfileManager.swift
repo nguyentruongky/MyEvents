@@ -9,7 +9,9 @@
 import UIKit
 
 class meProfileManager: knPagerController {
-    
+
+    private let headerViewHeight: CGFloat = 120
+
     lazy var profileImageView: UIImageView = { [weak self] in
         
         let iv = UIImageView(image: UIImage(named: "login"))
@@ -29,8 +31,7 @@ class meProfileManager: knPagerController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.textColor = .black
-        
-        
+
         let imageView: UIImageView = {
             
             let imageName = "edit"
@@ -51,19 +52,12 @@ class meProfileManager: knPagerController {
         
         return label
     }()
-    
-    func handleEditName() {
-        nameTextField.becomeFirstResponder()
-    }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
-    
-    private let headerViewHeight: CGFloat = 120
-    
+
     override func setupView() {
         
         navigationController?.isNavigationBarHidden = true
@@ -90,16 +84,7 @@ class meProfileManager: knPagerController {
         
         
     }
-    
-    func handleChangeProfileImage() {
-        
-        func didSelectImage(_ image: UIImage) {
-            profileImageView.image = image
-        }
-        
-        knPhotoSelectorWorker(finishSelection: didSelectImage).execute()
-    }
-    
+
     override func formatTabIndicator() {
         
         tabsViewBackgroundColor = .white
@@ -126,4 +111,23 @@ class meProfileManager: knPagerController {
         
     }
     
+}
+
+
+extension meProfileManager {
+
+
+    func handleEditName() {
+        nameTextField.becomeFirstResponder()
+    }
+
+    func handleChangeProfileImage() {
+
+        func didSelectImage(_ image: UIImage) {
+            profileImageView.image = image
+        }
+
+        knPhotoSelectorWorker(finishSelection: didSelectImage).execute()
+    }
+
 }

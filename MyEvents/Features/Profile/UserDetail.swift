@@ -12,26 +12,16 @@ import GooglePlaces
 struct meAddressModel {
     
     var address: String
-    
 }
 
 class mePersonalDetailController: knTableController {
     
     var datasource = [meAddressModel]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupView()
-        fetchData()
-    }
-    
+
     let emailTextField: FloatLabelTextField = {
         
-        let tf =  meNewEventController.makeTextField(placeholder: "Address")
+        let tf =  meSupporter.makeFloatTextField(placeholder: "Email")
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.placeholder = "Email"
-        tf.text = "nguyen@gmail.com"
         
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +33,14 @@ class mePersonalDetailController: knTableController {
         }()
     
     var selectedIndex: Int?
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setupView()
+        fetchData()
+    }
+
     override func setupView() {
         
         let addressesLabel: UILabel = {
@@ -135,80 +132,6 @@ extension mePersonalDetailController {
     }
     
 }
-
-
-extension mePersonalDetailController: GMSAutocompleteViewControllerDelegate {
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        viewController.dismiss(animated: true)
-        
-        guard let address = place.formattedAddress, let index = selectedIndex else { return }
-        datasource[index] = meAddressModel(address: address)
-        tableView.reloadData()
-    }
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        viewController.dismiss(animated: true)
-    }
-    
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        viewController.dismiss(animated: true)
-    }
-}
-
-
-
-class meAddNewAddressCell: knTableCell {
-    
-    weak var parent: mePersonalDetailController?
-    
-    internal lazy var addButton: UIButton = { [weak self] in
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor.color(r: 141, g: 141, b: 141, alpha: 0.5)
-        button.createRoundCorner(22)
-        button.setTitle("Add new address", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-        button.addTarget(self, action: #selector(handleAddAddress), for: .touchUpInside)
-        return button
-        }()
-    
-    func handleAddAddress() {
-        let controller = GMSAutocompleteViewController()
-        controller.delegate = self
-        parent?.present(controller, animated: true)
-    }
-    
-    override func setupView() {
-        
-        addSubview(addButton)
-        addButton.fill(toView: self, space: UIEdgeInsets(space: 16))
-        addButton.height(44)
-    }
-    
-}
-
-
-extension meAddNewAddressCell: GMSAutocompleteViewControllerDelegate {
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        viewController.dismiss(animated: true)
-        
-        guard let address = place.formattedAddress else { return }
-        parent?.datasource.append(meAddressModel(address: address))
-        parent?.tableView.reloadData()
-    }
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        viewController.dismiss(animated: true)
-    }
-    
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        viewController.dismiss(animated: true)
-    }
-}
-
 
 
 

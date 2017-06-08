@@ -9,7 +9,19 @@
 import UIKit
 
 extension UIButton {
-    
+
+    func setBackgroundColor(color: UIColor, forState: UIControlState) {
+
+        let context = UIGraphicsGetCurrentContext()
+        UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
+        context?.setFillColor(color.cgColor)
+        context!.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
+        let colorImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        self.setBackgroundImage(colorImage, for: forState)
+    }
+
     func animate(atPosition position: CGPoint) {
         
         clipsToBounds = true

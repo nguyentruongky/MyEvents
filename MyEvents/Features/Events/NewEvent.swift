@@ -7,10 +7,13 @@
 //
 
 import UIKit
-import GooglePlaces
 
 class meNewEventController: knTableController {
-    
+
+    var startDate: Date?
+
+    var endDate: Date?
+
     var datasource = [UITableViewCell]()
     
     let eventImageView: UIImageView = {
@@ -24,11 +27,11 @@ class meNewEventController: knTableController {
         return iv
     }()
     
-    let eventNameTextField = meNewEventController.makeTextField(placeholder: "Event name")
+    let eventNameTextField = meSupporter.makeFloatTextField(placeholder: "Event name")
     
     lazy var startDateTextField: UITextField = { [weak self] in
         
-        let tf =  meNewEventController.makeTextField(placeholder: "Start date")
+        let tf =  meSupporter.makeFloatTextField(placeholder: "Start date")
         tf.translatesAutoresizingMaskIntoConstraints = false
         
         let button = UIButton()
@@ -40,19 +43,10 @@ class meNewEventController: knTableController {
         
         return tf
     }()
-    
-    func handlePickStartDate() {
-        DatePickerDialog().show("Select Start date", doneButtonTitle: "Confirm", cancelButtonTitle: "Cancel", defaultDate: Date(), datePickerMode: .dateAndTime, callback: { [weak self] date in
-            
-            guard let _self = self, let date = date else { return }
-            _self.startDateTextField.text = date.toString("MM/dd/yyyy - hh:mm a")
-            _self.startDate = date
-        })
-    }
-    
+
     lazy var endDateTextField: UITextField = { [weak self] in
         
-        let tf =  meNewEventController.makeTextField(placeholder: "End date")
+        let tf =  meSupporter.makeFloatTextField(placeholder: "End date")
         tf.translatesAutoresizingMaskIntoConstraints = false
         
         let button = UIButton()
@@ -64,19 +58,10 @@ class meNewEventController: knTableController {
         
         return tf
         }()
-    
-    func handlePickEndDate() {
-        DatePickerDialog().show("Select End date", doneButtonTitle: "Confirm", cancelButtonTitle: "Cancel", defaultDate: Date(), datePickerMode: .dateAndTime, callback: { [weak self] date in
-            
-            guard let _self = self, let date = date else { return }
-            _self.endDateTextField.text = date.toString("MM/dd/yyyy - hh:mm a")
-            _self.endDate = date
-        })
-    }
-    
+
     lazy var addressTextField: UITextField = { [weak self] in
         
-        let tf =  meNewEventController.makeTextField(placeholder: "Address")
+        let tf =  meSupporter.makeFloatTextField(placeholder: "Address")
         tf.translatesAutoresizingMaskIntoConstraints = false
         
         let button = UIButton()
@@ -88,27 +73,7 @@ class meNewEventController: knTableController {
         
         return tf
         }()
-    
-    func handlePickAddress() {
-        let controller = GMSAutocompleteViewController()
-        controller.delegate = self
-        present(controller, animated: true)
-    }
-    
-    
-    static func makeTextField(placeholder: String) -> FloatLabelTextField {
-        let tf = FloatLabelTextField()
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.font = UIFont.systemFont(ofSize: 17)
-        tf.textColor = UIColor.color(value: 74)
-        tf.placeholder = placeholder
-        return tf
 
-    }
-    
-    var startDate: Date?
-    var endDate: Date?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -193,37 +158,6 @@ class meNewEventController: knTableController {
         
         return cell
     }
-}
-
-extension meNewEventController: GMSAutocompleteViewControllerDelegate {
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        
-        addressTextField.text = place.formattedAddress
-        viewController.dismiss(animated: true)
-    }
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        viewController.dismiss(animated: true)
-    }
-    
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        viewController.dismiss(animated: true)
-    }
-}
-
-
-
-extension meNewEventController: UITextFieldDelegate {
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField == startDateTextField || textField == endDateTextField {
-            return false
-        }
-        
-        return true
-    }
-    
 }
 
 extension meNewEventController {

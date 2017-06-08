@@ -9,8 +9,24 @@
 import UIKit
 
 struct meSupporter {
-    
-    static func makeTextField(placeholder: String) -> UITextField {
+
+    static func makeActionButton(title: String, backgroundColor: UIColor = UIColor.color(value: 141)) -> UIButton {
+
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+
+        button.setBackgroundColor(color: backgroundColor, forState: .normal)
+        button.setBackgroundColor(color: backgroundColor.withAlphaComponent(0.5), forState: .disabled)
+
+        button.createRoundCorner(22)
+        return button
+
+    }
+
+    static func makeUnderlineTextField(placeholder: String) -> UITextField {
         
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
@@ -30,6 +46,16 @@ struct meSupporter {
         underline.bottom(toView: tf)
         underline.height(0.5)
         
+        return tf
+    }
+
+    static func makeFloatTextField(placeholder: String) -> FloatLabelTextField {
+
+        let tf = FloatLabelTextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.font = UIFont.systemFont(ofSize: 17)
+        tf.textColor = UIColor.color(value: 74)
+        tf.placeholder = placeholder
         return tf
     }
 }
