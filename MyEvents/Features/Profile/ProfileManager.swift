@@ -101,7 +101,10 @@ class meProfileManager: knPagerController {
     }
     
     func handleSignout() {
-        
+        let controller = UINavigationController(rootViewController: meLoginController())
+        appDelegate.window?.rootViewController = controller
+        meSetting.currentUser = nil
+        meSetting.currentUserEmail = nil 
     }
     
     override func formatTabIndicator() {

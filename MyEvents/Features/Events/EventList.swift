@@ -50,13 +50,7 @@ class meEventListController: knTableController {
     override func fetchData() {
         output?.fetchList()
         
-        for _ in 0 ..< 3 {
-            datasource.append(meEventModel(name: "Dr. Ted Malloch on “What the new US Presidential administration means for Brexit and the EU”",
-                                           startDate: "23rd May 2017 2:00", endDate: "4:00 pm",
-                                           address: "Head of Open Europe Brussels VZW"))
-        }
         
-        tableView.reloadData()
     }
 }
 

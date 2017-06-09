@@ -78,7 +78,7 @@ extension meUserDetailPresenter: meUserDetailInteractorOutput {
 extension mePersonalDetailController: meUserDetailPresenterOutput {
     
     func displayProfile(_ user: meUser) {
-        profileManager?.nameTextField.text = user.name
+        profileManager?.nameTextField.text = user.name == nil ? user.email : user.name
         emailTextField.text = user.email
         datasource.append(contentsOf: user.addresses.map({ return meAddressModel(address: $0) }))
     }

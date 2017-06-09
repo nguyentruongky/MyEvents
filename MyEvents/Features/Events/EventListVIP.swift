@@ -32,7 +32,8 @@ protocol meEventListControllerOutput: class {
 protocol meEventListInteractorOutput: class {
     
     func fetchEventsSuccess(events: [meEventModel])
-    
+
+    func fetchEventsFail(_ error: knError)
 }
 
 // 5
@@ -40,13 +41,15 @@ protocol meEventListInteractorOutput: class {
 extension meEventListInteractor: meEventListControllerOutput {
     
     func fetchList() {
-        meFetchEventsWorker(success: output?.fetchEventsSuccess, fail: nil).execute()
+        meFetchEventsWorker(success: output?.fetchEventsSuccess, fail: output?.fetchEventsFail).execute()
     }
 }
 
 // 6 - Define protocol to update directly to UI
 protocol meEventListPresenterOutput: class {
     func displayEvents(_ events: [meEventModel])
+
+    func displayFetchEventError(_ error: knError)
 }
 
 
@@ -55,6 +58,10 @@ extension meEventListPresenter: meEventListInteractorOutput {
     
     func fetchEventsSuccess(events: [meEventModel]) {
         output?.displayEvents(events)
+    }
+
+    func fetchEventsFail(_ error: knError) {
+        output?.displayFetchEventError(error)
     }
 }
 
@@ -65,6 +72,18 @@ extension meEventListController: meEventListPresenterOutput {
     func displayEvents(_ events: [meEventModel]) {
         
         datasource.append(contentsOf: events)
+        tableView.reloadData()
+    }
+
+    func displayFetchEventError(_ error: knError) {
+
+        // test data 
+        for _ in 0 ..< 3 {
+            datasource.append(meEventModel(name: "Dr. Ted Malloch on “What the new US Presidential administration means for Brexit and the EU”",
+                                           startDate: "23rd May 2017 2:00", endDate: "4:00 pm",
+                                           address: "Head of Open Europe Brussels VZW"))
+        }
+
         tableView.reloadData()
     }
 }

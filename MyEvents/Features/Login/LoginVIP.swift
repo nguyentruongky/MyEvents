@@ -84,7 +84,9 @@ extension meLoginPresenter: meLoginInteractorOutput {
     }
     
     func loginFail(error: knError) {
-        loginFail(error: error)
+
+        output?.loginFail(error: error)
+
     }
 }
 
@@ -142,6 +144,9 @@ extension meLoginController: meLoginPresenterOutput {
     
     func loginFail(error: knError) {
         // display error
+        let controller = UIAlertController(title: "Error", message: "Invalid account", preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(controller, animated: true)
     }
     
     

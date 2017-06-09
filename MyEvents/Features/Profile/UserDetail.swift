@@ -129,7 +129,19 @@ extension mePersonalDetailController {
         
         return isExtraCell(index: indexPath.row) == true ? 76 : 44
     }
-    
+
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+
+            datasource.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedIndex = indexPath.row
