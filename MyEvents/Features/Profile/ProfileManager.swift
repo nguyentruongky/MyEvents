@@ -26,11 +26,12 @@ class meProfileManager: knPagerController {
     
     lazy var nameTextField: UITextField = { [weak self] in
         
-        let label = UITextField()
-        label.text = "Ky Nguyen"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 17)
-        label.textColor = .black
+        let tf = UITextField()
+        tf.text = "Ky Nguyen"
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.font = UIFont.boldSystemFont(ofSize: 17)
+        tf.textColor = .black
+        tf.textAlignment = .center
 
         let imageView: UIImageView = {
             
@@ -47,10 +48,10 @@ class meProfileManager: knPagerController {
         
         
         imageView.square(edge: 18)
-        label.rightView = imageView
-        label.rightViewMode = .always
+        tf.rightView = imageView
+        tf.rightViewMode = .always
         
-        return label
+        return tf
     }()
 
     override func viewDidLoad() {
@@ -75,16 +76,34 @@ class meProfileManager: knPagerController {
         
         nameTextField.centerX(toView: profileImageView)
         nameTextField.verticalSpacing(toView: profileImageView, space: 16)
-        
+        nameTextField.width(200)
         
         view.addSubview(headerView)
-        headerView.height(headerViewHeight)
+        headerView.height(200)
         headerView.horizontal(toView: view)
         headerView.top(toView: view)
         
+        let signoutButton: UIButton = {
+            let button = UIButton()
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.setTitle("Signout", for: .normal)
+            button.setTitleColor(UIColor.color(hex: "#999999"), for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+            return button
+            
+        }()
+        
+        headerView.addSubview(signoutButton)
+        signoutButton.centerX(toView: profileImageView)
+        signoutButton.verticalSpacing(toView: nameTextField, space: 4)
+        
+        signoutButton.addTarget(self, action: #selector(handleSignout), for: .touchUpInside)
+    }
+    
+    func handleSignout() {
         
     }
-
+    
     override func formatTabIndicator() {
         
         tabsViewBackgroundColor = .white
