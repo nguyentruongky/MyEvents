@@ -17,7 +17,7 @@ This is just a small assignment.
 ### Instruction 
 The assignment requires to use Realm database, but I have some problem to setup Realm. It took me too much time for that, so that I changed to build a NodeJS server and connect to it. 
 
-The server code is in `server` folder, please make sure you run it before try the code. 
+The server code is in `server` folder, please make sure you run it before try the code. NodeJS is required. Please install it before run it. 
 
 - Change directory to the server folder
 - Run `nodemon main.js`
